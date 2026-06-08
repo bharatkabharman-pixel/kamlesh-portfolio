@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Naarii Jewels — Case Study · Rahul Jangid</title>
+<meta name="description" content="Case study: Naarii Jewels, a silver and artificial jewellery e-commerce app with a rich catalog and in-app ordering — built in Flutter by Rahul Jangid." />
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,600;12..96,700;12..96,800&family=Instrument+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+<style>
+  :root{
+    --bg:#07080b;--bg-2:#0b0d13;--surface:#0f121a;--line:rgba(255,255,255,.08);--line-soft:rgba(255,255,255,.05);
+    --txt:#f3f5fb;--txt-mid:#aab2c2;--txt-dim:#6b7384;--accent:#4fe0c5;--accent-2:#5b7cfa;
+    --accent-glow:rgba(79,224,197,.5);--c:#c0274d;--c-soft:rgba(192,39,77,.14);--c-line:rgba(192,39,77,.38);
+    --ease:cubic-bezier(.22,.61,.36,1);--maxw:1080px;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{font-family:"Instrument Sans",system-ui,sans-serif;background:var(--bg);color:var(--txt);line-height:1.6;
+    -webkit-font-smoothing:antialiased;overflow-x:hidden;position:relative;min-height:100vh}
+  a{color:inherit}
+
+  .bg-layer{position:fixed;inset:0;z-index:0;pointer-events:none}
+  .aurora{filter:blur(90px);opacity:.4}
+  .aurora span{position:absolute;border-radius:50%}
+  .aurora .a1{width:520px;height:520px;top:-180px;left:-120px;background:radial-gradient(circle at 30% 30%,rgba(192,39,77,.4),transparent 60%)}
+  .aurora .a2{width:560px;height:560px;top:-120px;right:-160px;background:radial-gradient(circle at 60% 40%,rgba(91,124,250,.4),transparent 62%)}
+  .grid-lines{background-image:linear-gradient(var(--line-soft) 1px,transparent 1px),linear-gradient(90deg,var(--line-soft) 1px,transparent 1px);
+    background-size:64px 64px;mask-image:radial-gradient(ellipse 80% 55% at 50% 0%,#000 35%,transparent 78%);
+    -webkit-mask-image:radial-gradient(ellipse 80% 55% at 50% 0%,#000 35%,transparent 78%);opacity:.5}
+
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 28px;position:relative;z-index:2}
+
+  header{position:fixed;top:0;left:0;right:0;z-index:50;transition:.4s var(--ease)}
+  header.scrolled{background:rgba(7,8,11,.72);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+  nav{display:flex;align-items:center;justify-content:space-between;height:72px}
+  .logo{display:flex;align-items:center;gap:10px;font-family:"Bricolage Grotesque";font-weight:700;font-size:19px;text-decoration:none;color:var(--txt)}
+  .logo .dot{width:11px;height:11px;border-radius:3px;background:var(--accent);box-shadow:0 0 14px var(--accent-glow);transform:rotate(45deg)}
+  .back{display:inline-flex;align-items:center;gap:8px;padding:9px 16px;border-radius:999px;border:1px solid var(--line);
+    background:rgba(255,255,255,.03);color:var(--txt-mid);text-decoration:none;font-size:14px;font-weight:500;transition:.3s var(--ease)}
+  .back:hover{color:var(--txt);border-color:var(--accent);transform:translateX(-2px)}
+  .back svg{width:15px;height:15px}
+
+  .cs-hero{padding:130px 0 50px}
+  .kicker{display:inline-flex;align-items:center;gap:9px;font-family:"JetBrains Mono";font-size:12px;
+    letter-spacing:.16em;text-transform:uppercase;color:var(--c)}
+  .kicker .bar{width:26px;height:1px;background:var(--c)}
+  .cs-hero h1{font-family:"Bricolage Grotesque";font-weight:700;letter-spacing:-.03em;line-height:1.02;
+    font-size:clamp(44px,7vw,82px);margin:18px 0 14px}
+  .cs-hero .tag{color:var(--txt-mid);font-size:clamp(17px,2vw,21px);max-width:640px}
+
+  .facts{display:flex;flex-wrap:wrap;gap:34px;margin-top:34px;padding:24px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+  .fact .fl{font-family:"JetBrains Mono";font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--txt-dim)}
+  .fact .fv{font-family:"Bricolage Grotesque";font-weight:600;font-size:16px;margin-top:5px}
+  .store-row{display:flex;gap:14px;flex-wrap:wrap;margin-top:30px}
+  .store-btn{display:inline-flex;align-items:center;gap:9px;padding:13px 22px;border-radius:12px;font-weight:600;font-size:14.5px;
+    text-decoration:none;transition:.3s var(--ease)}
+  .store-btn.primary{background:linear-gradient(105deg,var(--c),#e8637f);color:#fff;box-shadow:0 12px 32px -12px var(--c-line)}
+  .store-btn.ghost{background:rgba(255,255,255,.03);border:1px solid var(--line);color:var(--txt)}
+  .store-btn:hover{transform:translateY(-3px)}
+  .store-btn svg{width:16px;height:16px}
+
+  .hero-img{margin-top:46px;border-radius:24px;overflow:hidden;border:1px solid var(--line);
+    box-shadow:0 40px 90px -40px rgba(0,0,0,.8)}
+  .hero-img img{width:100%;display:block}
+
+  section.block{padding:60px 0}
+  .sec-k{font-family:"JetBrains Mono";font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--c);margin-bottom:14px}
+  .block h2{font-family:"Bricolage Grotesque";font-weight:700;letter-spacing:-.025em;font-size:clamp(26px,3.4vw,38px);margin-bottom:18px}
+  .block p{color:var(--txt-mid);font-size:17px;line-height:1.75;max-width:760px}
+  .block p+p{margin-top:14px}
+  .block p b{color:var(--txt);font-weight:600}
+  .two{display:grid;grid-template-columns:1fr 1fr;gap:26px;margin-top:8px}
+  .panel{border:1px solid var(--line);border-radius:20px;padding:28px;background:linear-gradient(165deg,var(--surface),var(--bg-2))}
+  .panel h3{font-family:"Bricolage Grotesque";font-weight:600;font-size:19px;margin-bottom:12px;display:flex;align-items:center;gap:10px}
+  .panel h3 .d{width:8px;height:8px;border-radius:2px;background:var(--c);transform:rotate(45deg)}
+  .panel ul{list-style:none;display:flex;flex-direction:column;gap:11px}
+  .panel li{display:flex;gap:11px;color:var(--txt-mid);font-size:15px;line-height:1.5}
+  .panel li svg{width:18px;height:18px;color:var(--c);flex-shrink:0;margin-top:2px}
+
+  .feat-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:14px}
+  .feat{border:1px solid var(--line);border-radius:18px;padding:24px;background:rgba(255,255,255,.02);transition:.35s var(--ease)}
+  .feat:hover{transform:translateY(-5px);border-color:var(--c-line);background:var(--c-soft)}
+  .feat .fi{width:42px;height:42px;border-radius:12px;display:flex;align-items:center;justify-content:center;
+    background:var(--c-soft);border:1px solid var(--c-line);margin-bottom:14px}
+  .feat .fi svg{width:21px;height:21px;color:var(--c)}
+  .feat h4{font-family:"Bricolage Grotesque";font-weight:600;font-size:17px;margin-bottom:7px}
+  .feat p{font-size:14px;color:var(--txt-dim);line-height:1.55;max-width:none}
+
+  .chips{display:flex;flex-wrap:wrap;gap:10px;margin-top:10px}
+  .chips span{font-family:"JetBrains Mono";font-size:13px;padding:9px 16px;border-radius:999px;
+    background:rgba(255,255,255,.04);border:1px solid var(--line);color:var(--txt-mid)}
+
+  .results{border:1px solid var(--line);border-radius:24px;padding:40px;margin-top:14px;
+    background:radial-gradient(120% 100% at 50% 0%,var(--c-soft),transparent 60%),linear-gradient(165deg,var(--surface),var(--bg-2))}
+  .res-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+  .res .rn{font-family:"Bricolage Grotesque";font-weight:700;font-size:clamp(26px,3vw,34px);
+    background:linear-gradient(120deg,var(--c),#f0a0b5);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+  .res .rl{color:var(--txt-dim);font-size:13.5px;margin-top:6px}
+
+  .cta{text-align:center;padding:70px 0}
+  .cta h2{font-family:"Bricolage Grotesque";font-weight:700;font-size:clamp(28px,4vw,44px);letter-spacing:-.02em;margin-bottom:14px}
+  .cta p{color:var(--txt-mid);max-width:480px;margin:0 auto 26px}
+  .cta-btns{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+  .btn{display:inline-flex;align-items:center;gap:9px;padding:14px 26px;border-radius:13px;font-weight:600;font-size:15px;text-decoration:none;transition:.3s var(--ease)}
+  .btn-primary{background:linear-gradient(105deg,var(--accent),#7af0da);color:#04201b;box-shadow:0 12px 34px -10px var(--accent-glow)}
+  .btn-ghost{background:rgba(255,255,255,.03);border:1px solid var(--line);color:var(--txt)}
+  .btn:hover{transform:translateY(-3px)}
+  .btn svg{width:16px;height:16px}
+  footer{border-top:1px solid var(--line);padding:34px 0;position:relative;z-index:2}
+  .foot{display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap;color:var(--txt-dim);font-size:13.5px}
+  .foot a{color:var(--txt-mid);text-decoration:none}
+  .foot a:hover{color:var(--accent)}
+
+  @media(max-width:820px){
+    .two,.feat-grid{grid-template-columns:1fr}
+    .res-grid{grid-template-columns:1fr 1fr}
+    .cs-hero{padding:110px 0 40px}
+  }
+</style>
+</head>
+<body>
+
+<div class="bg-layer aurora"><span class="a1"></span><span class="a2"></span></div>
+<div class="bg-layer grid-lines"></div>
+
+<header id="header">
+  <div class="wrap">
+    <nav>
+      <a href="../index.html" class="logo"><span class="dot"></span>Rahul<span style="color:var(--accent)">.</span></a>
+      <a href="../index.html#work" class="back"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M19 12H5M11 18l-6-6 6-6"/></svg>Back to projects</a>
+    </nav>
+  </div>
+</header>
+
+<!-- Hero -->
+<section class="cs-hero">
+  <div class="wrap">
+    <span class="kicker"><span class="bar"></span>Case Study</span>
+    <h1>Naarii Jewels</h1>
+    <p class="tag">A digital storefront for a silver and artificial-jewellery brand — browse a rich catalog, discover collections, and place orders right in the app.</p>
+
+    <div class="facts">
+      <div class="fact"><div class="fl">My Role</div><div class="fv">Mobile App Developer</div></div>
+      <div class="fact"><div class="fl">Platforms</div><div class="fv">iOS &amp; Android</div></div>
+      <div class="fact"><div class="fl">Category</div><div class="fv">E-commerce · Jewellery</div></div>
+      <div class="fact"><div class="fl">Stack</div><div class="fv">Flutter · GetX · Firebase</div></div>
+      <div class="fact"><div class="fl">Year</div><div class="fv">2023</div></div>
+    </div>
+
+    <div class="store-row">
+      <a href="https://play.google.com/store/apps/details?id=com.naari.jewells" target="_blank" rel="noopener" class="store-btn primary">
+        Google Play <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      <a href="https://apps.apple.com/in/app/naarii-jewels/id6476127764" target="_blank" rel="noopener" class="store-btn ghost">
+        App Store <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+    </div>
+
+    <div class="hero-img"><img src="../images/naarii.jpg" alt="Naarii Jewels app screens"></div>
+  </div>
+</section>
+
+<!-- Overview -->
+<section class="block">
+  <div class="wrap">
+    <div class="sec-k">Overview</div>
+    <h2>A jewellery brand, in your pocket</h2>
+    <p>Naarii Jewels is a dedicated mobile storefront for a silver and artificial-jewellery brand, giving customers a beautiful, app-native shopping experience. Shoppers can browse curated collections, explore detailed product pages and place orders — all within a smooth, reactive interface.</p>
+    <p>I built the <b>Naarii Jewels app from scratch in Flutter</b> with <b>GetX</b> powering clean, reactive state management — delivering a polished shopping experience on both iOS and Android from a single codebase, with <b>Firebase</b> handling the backend and push notifications.</p>
+  </div>
+</section>
+
+<!-- Challenge + Goals -->
+<section class="block">
+  <div class="wrap">
+    <div class="sec-k">The Challenge &amp; Goals</div>
+    <div class="two">
+      <div class="panel">
+        <h3><span class="d"></span>The Challenge</h3>
+        <p style="color:var(--txt-mid);font-size:15.5px">Jewellery brands typically rely on physical stores or generic e-commerce websites that don't showcase their products well on mobile. Customers browsing jewellery on a small screen need high-quality visuals, easy navigation by category, and a frictionless way to discover and order — none of which a website does well as a dedicated app.</p>
+      </div>
+      <div class="panel">
+        <h3><span class="d"></span>The Goals</h3>
+        <ul>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m5 12 5 5L20 7"/></svg>Beautiful branded storefront for the jewellery brand</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m5 12 5 5L20 7"/></svg>Rich product catalog with images &amp; details</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m5 12 5 5L20 7"/></svg>Browse by category &amp; collection</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m5 12 5 5L20 7"/></svg>Seamless in-app ordering</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m5 12 5 5L20 7"/></svg>Push notifications for offers &amp; order updates</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Key features -->
+<section class="block">
+  <div class="wrap">
+    <div class="sec-k">Key Features</div>
+    <h2>What Naarii Jewels does</h2>
+    <div class="feat-grid">
+      <div class="feat">
+        <div class="fi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg></div>
+        <h4>Product Catalog</h4><p>A rich, visually-led catalog of silver and artificial jewellery — earrings, necklaces, bangles and more.</p>
+      </div>
+      <div class="feat">
+        <div class="fi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.6 13.4 13.4 20.6a2 2 0 0 1-2.8 0l-7-7V3h10.6l6.4 6.4a2 2 0 0 1 0 2.8z"/><circle cx="7.5" cy="7.5" r="1.5"/></svg></div>
+        <h4>Collections &amp; Categories</h4><p>Browse jewellery by category or curated collection — making discovery intuitive and enjoyable.</p>
+      </div>
+      <div class="feat">
+        <div class="fi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg></div>
+        <h4>Product Details</h4><p>High-quality product images, descriptions, materials and pricing — everything needed to make a confident purchase.</p>
+      </div>
+      <div class="feat">
+        <div class="fi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 3h2l2.6 13.4a1 1 0 0 0 1 .8h9.7a1 1 0 0 0 1-.8L21 7H6"/><circle cx="9" cy="20" r="1"/><circle cx="18" cy="20" r="1"/></svg></div>
+        <h4>Cart &amp; Ordering</h4><p>Add items to cart and place orders directly in the app — quick, simple and reliable.</p>
+      </div>
+      <div class="feat">
+        <div class="fi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg></div>
+        <h4>Wishlist</h4><p>Save favourite pieces to a wishlist and come back to them whenever ready to buy.</p>
+      </div>
+      <div class="feat">
+        <div class="fi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg></div>
+        <h4>Push Notifications</h4><p>Firebase-powered alerts for new collections, exclusive offers and order status updates.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Tech & architecture -->
+<section class="block">
+  <div class="wrap">
+    <div class="sec-k">Tech &amp; Architecture</div>
+    <h2>How it's built</h2>
+    <p>Naarii Jewels is built in <b>Flutter</b> for a consistent, pixel-perfect experience on both iOS and Android. <b>GetX</b> handles state management, dependency injection and routing in a lightweight, reactive way — keeping the UI snappy as users browse the catalog. <b>Firebase</b> powers authentication, data storage and push notifications for order updates and promotional campaigns.</p>
+    <div class="chips">
+      <span>Flutter</span><span>Dart</span><span>GetX</span><span>Firebase</span>
+      <span>Push Notifications</span><span>E-commerce Flow</span>
+    </div>
+  </div>
+</section>
+
+<!-- Results -->
+<section class="block">
+  <div class="wrap">
+    <div class="sec-k">Outcome</div>
+    <h2>The result</h2>
+    <div class="results">
+      <div class="res-grid">
+        <div class="res"><div class="rn">iOS + Android</div><div class="rl">Shipped to both stores</div></div>
+        <div class="res"><div class="rn">E-commerce</div><div class="rl">Full catalog &amp; ordering</div></div>
+        <div class="res"><div class="rn">Brand-native</div><div class="rl">Dedicated jewellery storefront</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta">
+  <div class="wrap">
+    <h2>Have a product like this in mind?</h2>
+    <p>I help startups and businesses take mobile apps from idea to launch on iOS and Android.</p>
+    <div class="cta-btns">
+      <a href="../index.html#contact" class="btn btn-primary">Start a project
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      <a href="../index.html#work" class="btn btn-ghost">See more work</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="foot">
+      <a href="../index.html" class="logo" style="font-size:17px"><span class="dot"></span>Rahul<span style="color:var(--accent)">.</span></a>
+      <div>© <span id="year"></span> Rahul Jangid · True Response Softech Pvt Ltd</div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  const header=document.getElementById('header');
+  addEventListener('scroll',()=>header.classList.toggle('scrolled',scrollY>20),{passive:true});
+  document.getElementById('year').textContent=new Date().getFullYear();
+</script>
+</body>
+</html>
