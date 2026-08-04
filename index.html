@@ -837,10 +837,24 @@
   document.getElementById('year').textContent=new Date().getFullYear();
   document.getElementById('contactForm').addEventListener('submit',function(e){
     e.preventDefault();
+    const formData = new FormData(this);
+    const name = formData.get('name');
+    const email = formData.get('email');
+    const type = formData.get('type');
+    const message = formData.get('message');
+    const whatsappMsg = `Hi Kamlesh, I would like to discuss a project.\n\n*Name:* ${name}\n*Email:* ${email}\n*Project Type:* ${type}\n*Details:* ${message}`;
+    const whatsappUrl = `https://api.whatsapp.com/send?phone=919785008237&text=${encodeURIComponent(whatsappMsg)}`;
+    
     const btn=this.querySelector('.submit-btn');
-    btn.textContent="Sent! I'll be in touch soon.";
-    btn.style.background='linear-gradient(105deg,#38bdf8,#22d3ee)';
-    setTimeout(()=>{btn.textContent='Send message';btn.style.background='';this.reset();},4000);
+    btn.textContent="Redirecting to WhatsApp...";
+    btn.style.background='linear-gradient(105deg,#25d366,#128c7e)';
+    
+    setTimeout(()=>{
+      window.open(whatsappUrl, '_blank');
+      btn.textContent='Send message';
+      btn.style.background='';
+      this.reset();
+    }, 800);
   });
 </script>
 </body>
