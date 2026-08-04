@@ -3,221 +3,126 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Rahul — Flutter & Cross-Platform App Developer</title>
-<meta name="description" content="Rahul is a Flutter and cross-platform app developer building fast, beautiful, production-ready mobile apps for startups and businesses." />
-
-<link rel="icon" type="image/jpeg" href="images/rahul.jpg">
-
-<!-- Fonts: distinctive display + clean body + mono accents -->
+<title>Kamlesh Kumar Jangir &mdash; Full Stack Web Developer</title>
+<meta name="description" content="Kamlesh Kumar Jangir is a Full Stack Web Developer with 10+ years of expertise in PHP, Laravel, ReactJS, NodeJS, WordPress, AWS and more." />
+<link rel="icon" type="image/jpeg" href="images/kamlesh.jpg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,600;12..96,700;12..96,800&family=Instrument+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-
 <style>
   :root{
-    --bg:#07080b;
-    --bg-2:#0b0d13;
-    --surface:#0f121a;
-    --surface-2:#141824;
-    --line:rgba(255,255,255,.08);
-    --line-soft:rgba(255,255,255,.05);
-    --txt:#f3f5fb;
-    --txt-mid:#aab2c2;
-    --txt-dim:#6b7384;
-    --accent:#4fe0c5;        /* mint-cyan */
-    --accent-2:#5b7cfa;      /* electric indigo */
-    --accent-glow:rgba(79,224,197,.5);
-    --radius:18px;
-    --maxw:1180px;
-    --ease:cubic-bezier(.22,.61,.36,1);
+    --bg:#030b1a;--bg-2:#050f22;--surface:#071428;--surface-2:#0a1a32;
+    --line:rgba(255,255,255,.10);--line-soft:rgba(255,255,255,.06);
+    --txt:#f0f6ff;--txt-mid:#94afd4;--txt-dim:#4e6a8a;
+    --accent:#38bdf8;--accent-2:#22d3ee;--accent-glow:rgba(56,189,248,.5);
+    --radius:18px;--maxw:1180px;--ease:cubic-bezier(.22,.61,.36,1);
   }
-
   *{box-sizing:border-box;margin:0;padding:0}
   html{scroll-behavior:smooth}
-  body{
-    font-family:"Instrument Sans",system-ui,sans-serif;
-    background:var(--bg);
-    color:var(--txt);
-    line-height:1.6;
-    -webkit-font-smoothing:antialiased;
-    overflow-x:hidden;
-    position:relative;
-    min-height:100vh;
-  }
-
-  /* ---------- Atmosphere layers ---------- */
+  body{font-family:"Instrument Sans",system-ui,sans-serif;background:var(--bg);color:var(--txt);
+    line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden;position:relative;min-height:100vh;}
   .bg-layer{position:fixed;inset:0;z-index:0;pointer-events:none}
   .aurora{filter:blur(80px);opacity:.55}
   .aurora span{position:absolute;border-radius:50%}
-  .aurora .a1{width:520px;height:520px;top:-160px;left:-120px;
-    background:radial-gradient(circle at 30% 30%,rgba(79,224,197,.55),transparent 60%)}
-  .aurora .a2{width:560px;height:560px;top:-80px;right:-160px;
-    background:radial-gradient(circle at 60% 40%,rgba(91,124,250,.5),transparent 62%)}
-  .aurora .a3{width:480px;height:480px;bottom:-220px;left:30%;
-    background:radial-gradient(circle at 50% 50%,rgba(91,124,250,.32),transparent 60%)}
-
-  .grid-lines{
-    background-image:
-      linear-gradient(var(--line-soft) 1px,transparent 1px),
-      linear-gradient(90deg,var(--line-soft) 1px,transparent 1px);
-    background-size:64px 64px;
-    mask-image:radial-gradient(ellipse 80% 60% at 50% 0%,#000 35%,transparent 78%);
-    -webkit-mask-image:radial-gradient(ellipse 80% 60% at 50% 0%,#000 35%,transparent 78%);
-    opacity:.6;
-  }
-  .grain{
-    opacity:.04;mix-blend-mode:overlay;
-    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
-  }
-
-  /* ---------- Layout ---------- */
+  .aurora .a1{width:520px;height:520px;top:-160px;left:-120px;background:radial-gradient(circle at 30% 30%,rgba(56,189,248,.4),transparent 60%)}
+  .aurora .a2{width:560px;height:560px;top:-80px;right:-160px;background:radial-gradient(circle at 60% 40%,rgba(34,211,238,.3),transparent 62%)}
+  .aurora .a3{width:480px;height:480px;bottom:-220px;left:30%;background:radial-gradient(circle at 50% 50%,rgba(56,189,248,.18),transparent 60%)}
+  .grid-lines{background-image:linear-gradient(var(--line-soft) 1px,transparent 1px),linear-gradient(90deg,var(--line-soft) 1px,transparent 1px);background-size:64px 64px;mask-image:radial-gradient(ellipse 80% 60% at 50% 0%,#000 35%,transparent 78%);-webkit-mask-image:radial-gradient(ellipse 80% 60% at 50% 0%,#000 35%,transparent 78%);opacity:.6;}
+  .grain{opacity:.04;mix-blend-mode:overlay;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");}
   .wrap{max-width:var(--maxw);margin:0 auto;padding:0 28px;position:relative;z-index:2}
-
-  /* ---------- Nav ---------- */
   header{position:fixed;top:0;left:0;right:0;z-index:50;transition:.4s var(--ease)}
-  header.scrolled{background:rgba(7,8,11,.72);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+  header.scrolled{background:rgba(3,11,26,.82);backdrop-filter:blur(18px);border-bottom:1px solid var(--line)}
   nav{display:flex;align-items:center;justify-content:space-between;height:74px}
   .logo{display:flex;align-items:center;gap:10px;font-family:"Bricolage Grotesque";font-weight:700;font-size:19px;letter-spacing:-.02em;text-decoration:none;color:var(--txt)}
   .logo .dot{width:11px;height:11px;border-radius:3px;background:var(--accent);box-shadow:0 0 14px var(--accent-glow);transform:rotate(45deg)}
   .nav-links{display:flex;align-items:center;gap:27px;list-style:none}
   .nav-links a{color:var(--txt-mid);text-decoration:none;font-size:14.5px;font-weight:500;position:relative;transition:.25s}
   .nav-links a::after{content:"";position:absolute;left:0;bottom:-5px;height:1.5px;width:0;background:var(--accent);transition:.3s var(--ease)}
-  .nav-links a:hover{color:var(--txt)}
-  .nav-links a:hover::after{width:100%}
-  .nav-cta{display:inline-flex;align-items:center;gap:8px;padding:10px 18px;border-radius:999px;
-    background:var(--txt);color:#0a0b0f;font-weight:600;font-size:14px;text-decoration:none;transition:.3s var(--ease)}
+  .nav-links a:hover{color:var(--txt)}.nav-links a:hover::after{width:100%}
+  .nav-cta{display:inline-flex;align-items:center;gap:8px;padding:10px 18px;border-radius:999px;background:var(--txt);color:#0a0b0f;font-weight:600;font-size:14px;text-decoration:none;transition:.3s var(--ease)}
   .nav-cta:hover{transform:translateY(-2px);box-shadow:0 10px 30px rgba(255,255,255,.12)}
   .burger{display:none;flex-direction:column;gap:5px;background:none;border:0;cursor:pointer;padding:8px}
   .burger span{width:24px;height:2px;background:var(--txt);border-radius:2px;transition:.3s}
-
-  /* ---------- Hero ---------- */
   .hero{position:relative;padding-top:148px;padding-bottom:70px;min-height:100vh;display:flex;align-items:center}
-  .hero-grid{display:flex;justify-content:center;width:100%}
-  .hero-copy{max-width:780px;display:flex;flex-direction:column;align-items:center;text-align:center}
-  .hero-copy .lead{margin-left:auto;margin-right:auto}
-
-  .pill{display:inline-flex;align-items:center;gap:9px;padding:7px 15px 7px 12px;border:1px solid var(--line);
-    border-radius:999px;background:rgba(255,255,255,.03);font-size:13px;color:var(--txt-mid);font-weight:500}
+  .hero-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center;width:100%}
+  .pill{display:inline-flex;align-items:center;gap:9px;padding:7px 15px 7px 12px;border:1px solid var(--line);border-radius:999px;background:rgba(255,255,255,.03);font-size:13px;color:var(--txt-mid);font-weight:500}
   .pulse{position:relative;width:8px;height:8px;border-radius:50%;background:var(--accent)}
   .pulse::after{content:"";position:absolute;inset:-4px;border-radius:50%;border:1px solid var(--accent);animation:ping 1.8s var(--ease) infinite}
   @keyframes ping{0%{transform:scale(.6);opacity:1}100%{transform:scale(2.2);opacity:0}}
-
-  h1{font-family:"Bricolage Grotesque";font-weight:700;letter-spacing:-.035em;line-height:1.02;
-    font-size:clamp(42px,6.2vw,76px);margin:24px 0 0}
+  h1{font-family:"Bricolage Grotesque";font-weight:700;letter-spacing:-.035em;line-height:1.02;font-size:clamp(38px,5.2vw,68px);margin:24px 0 0}
   h1 .grad{background:linear-gradient(105deg,var(--accent),var(--accent-2));-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
-  .role-line{font-family:"JetBrains Mono";font-size:14px;color:var(--accent);letter-spacing:.02em;margin-top:6px}
-  .lead{color:var(--txt-mid);font-size:clamp(16px,1.6vw,18.5px);max-width:520px;margin-top:24px}
+  .role-line{font-family:"JetBrains Mono";font-size:13.5px;color:var(--accent);letter-spacing:.02em;margin-top:6px}
+  .lead{color:var(--txt-mid);font-size:clamp(15px,1.45vw,17.5px);max-width:500px;margin-top:22px}
   .lead b{color:var(--txt);font-weight:600}
-
-  .cta-row{display:flex;align-items:center;gap:14px;margin-top:34px;flex-wrap:wrap}
-  .btn{display:inline-flex;align-items:center;gap:9px;padding:14px 24px;border-radius:13px;font-weight:600;
-    font-size:15px;text-decoration:none;transition:.3s var(--ease);border:1px solid transparent}
-  .btn-primary{background:linear-gradient(105deg,var(--accent),#7af0da);color:#04201b;box-shadow:0 12px 34px -10px var(--accent-glow)}
+  .cta-row{display:flex;align-items:center;gap:14px;margin-top:32px;flex-wrap:wrap}
+  .btn{display:inline-flex;align-items:center;gap:9px;padding:14px 24px;border-radius:13px;font-weight:600;font-size:15px;text-decoration:none;transition:.3s var(--ease);border:1px solid transparent}
+  .btn-primary{background:linear-gradient(105deg,#38bdf8,#22d3ee);color:#030b1a;box-shadow:0 12px 34px -10px var(--accent-glow)}
   .btn-primary:hover{transform:translateY(-3px);box-shadow:0 20px 44px -12px var(--accent-glow)}
   .btn-ghost{background:rgba(255,255,255,.03);border-color:var(--line);color:var(--txt)}
   .btn-ghost:hover{background:rgba(255,255,255,.07);transform:translateY(-3px)}
   .btn svg{width:17px;height:17px}
-
-  .stats{display:flex;gap:38px;margin-top:46px;flex-wrap:wrap}
+  .stats{display:flex;gap:38px;margin-top:42px;flex-wrap:wrap}
   .stat .num{font-family:"Bricolage Grotesque";font-weight:700;font-size:30px;letter-spacing:-.02em}
   .stat .num span{color:var(--accent)}
   .stat .lbl{color:var(--txt-dim);font-size:13px;margin-top:2px}
-
-  /* ---------- Phone visual ---------- */
+  /* Browser visual */
   .visual{position:relative;display:flex;justify-content:center;align-items:center}
-  .phone-glow{position:absolute;width:320px;height:420px;border-radius:50%;
-    background:radial-gradient(circle,rgba(79,224,197,.28),transparent 65%);filter:blur(40px)}
-  .phone{position:relative;width:268px;height:556px;border-radius:42px;padding:11px;
-    background:linear-gradient(160deg,#21252f,#0c0e14);
-    box-shadow:0 40px 90px -30px rgba(0,0,0,.8),0 0 0 1px rgba(255,255,255,.06),inset 0 0 0 1px rgba(255,255,255,.04);
-    animation:float 6s ease-in-out infinite}
-  @keyframes float{0%,100%{transform:translateY(0) rotate(-1.5deg)}50%{transform:translateY(-16px) rotate(-1.5deg)}}
-  .screen{width:100%;height:100%;border-radius:32px;background:linear-gradient(170deg,#0d1017,#0a0c12);overflow:hidden;position:relative;border:1px solid rgba(255,255,255,.05)}
-  .notch{position:absolute;top:11px;left:50%;transform:translateX(-50%);width:96px;height:22px;background:#000;border-radius:0 0 14px 14px;z-index:3}
-
-  .app{padding:30px 18px 18px;height:100%;display:flex;flex-direction:column;gap:14px}
-  .app-top{display:flex;justify-content:space-between;align-items:center;margin-top:6px}
-  .app-top .hi{font-size:11px;color:var(--txt-dim)}
-  .app-top .name{font-family:"Bricolage Grotesque";font-weight:600;font-size:15px}
-  .av{width:34px;height:34px;border-radius:12px;background:linear-gradient(135deg,var(--accent),var(--accent-2))}
-  .balance{background:linear-gradient(135deg,rgba(79,224,197,.16),rgba(91,124,250,.16));
-    border:1px solid var(--line);border-radius:18px;padding:16px}
-  .balance .t{font-size:10px;color:var(--txt-dim);font-family:"JetBrains Mono"}
-  .balance .v{font-family:"Bricolage Grotesque";font-weight:700;font-size:26px;margin-top:4px}
-  .balance .v small{font-size:14px;color:var(--accent)}
-  .chips{display:flex;gap:8px;margin-top:14px}
-  .chip{flex:1;text-align:center;padding:8px 0;border-radius:11px;background:rgba(255,255,255,.05);font-size:10px;color:var(--txt-mid);border:1px solid var(--line-soft)}
-  .chip.on{background:var(--accent);color:#04201b;font-weight:600;border-color:transparent}
-  .chart{flex:1;display:flex;align-items:flex-end;gap:7px;padding:14px 4px 6px}
-  .bar{flex:1;border-radius:6px 6px 3px 3px;background:linear-gradient(var(--accent),rgba(79,224,197,.25));animation:grow 1.4s var(--ease) backwards}
-  @keyframes grow{from{height:0!important;opacity:0}}
-  .rows{display:flex;flex-direction:column;gap:9px}
-  .row{display:flex;align-items:center;gap:10px}
-  .row .ico{width:30px;height:30px;border-radius:9px;background:rgba(255,255,255,.06);border:1px solid var(--line-soft)}
-  .row .meta{flex:1}
-  .row .l1{height:8px;width:60%;border-radius:4px;background:rgba(255,255,255,.14)}
-  .row .l2{height:6px;width:38%;border-radius:4px;background:rgba(255,255,255,.07);margin-top:5px}
-  .row .amt{font-size:11px;font-family:"JetBrains Mono";color:var(--accent)}
-
-  /* floating tech badges */
-  .badge{position:absolute;display:flex;align-items:center;gap:8px;padding:9px 14px;border-radius:13px;
-    background:rgba(15,18,26,.85);backdrop-filter:blur(10px);border:1px solid var(--line);
-    font-size:13px;font-weight:600;box-shadow:0 14px 34px -16px rgba(0,0,0,.7)}
+  .browser-glow{position:absolute;width:380px;height:380px;border-radius:50%;background:radial-gradient(circle,rgba(56,189,248,.2),transparent 65%);filter:blur(50px);pointer-events:none}
+  .browser{position:relative;width:100%;max-width:480px;border-radius:18px;background:linear-gradient(160deg,#1a1f2e,#0c0e14);border:1px solid rgba(255,255,255,.1);box-shadow:0 40px 90px -30px rgba(0,0,0,.8),0 0 0 1px rgba(255,255,255,.04);animation:floatB 6s ease-in-out infinite;overflow:hidden}
+  @keyframes floatB{0%,100%{transform:translateY(0)}50%{transform:translateY(-14px)}}
+  .browser-bar{display:flex;align-items:center;padding:13px 16px;background:rgba(255,255,255,.04);border-bottom:1px solid rgba(255,255,255,.07)}
+  .b-dots{display:flex;gap:7px;align-items:center}
+  .b-dots i{width:11px;height:11px;border-radius:50%}
+  .b-dots .d1{background:#ff5f57}.b-dots .d2{background:#febc2e}.b-dots .d3{background:#28c840}
+  .b-url{flex:1;margin:0 14px;background:rgba(255,255,255,.07);border-radius:7px;padding:5px 12px;font-family:"JetBrains Mono";font-size:11.5px;color:var(--txt-dim);display:flex;align-items:center;gap:7px}
+  .b-url svg{width:12px;height:12px;color:#28c840;flex-shrink:0}
+  .code-area{padding:20px 22px;font-family:"JetBrains Mono";font-size:12px;line-height:1.7;min-height:260px}
+  .cl{display:block}
+  .c-ln{color:#4b5572;margin-right:18px;user-select:none;font-size:10.5px}
+  .c-key{color:#38bdf8}.c-fn{color:#22d3ee}.c-str{color:#f6a020}.c-cmt{color:#4b5572;font-style:italic}.c-var{color:#f3f5fb}
+  .browser-footer{display:flex;gap:8px;flex-wrap:wrap;padding:14px 18px 18px;border-top:1px solid rgba(255,255,255,.06)}
+  .b-tag{font-size:11px;padding:4px 10px;border-radius:999px;font-family:"JetBrains Mono";border:1px solid rgba(255,255,255,.1);color:var(--txt-dim);background:rgba(255,255,255,.03)}
+  .badge{position:absolute;display:flex;align-items:center;gap:8px;padding:9px 14px;border-radius:13px;background:rgba(15,18,26,.9);backdrop-filter:blur(10px);border:1px solid var(--line);font-size:13px;font-weight:600;box-shadow:0 14px 34px -16px rgba(0,0,0,.7)}
   .badge i{width:9px;height:9px;border-radius:3px;display:inline-block}
-  .badge.b1{top:54px;left:-26px;animation:float2 5s ease-in-out infinite}
-  .badge.b2{bottom:120px;right:-34px;animation:float2 5.6s ease-in-out infinite .6s}
-  .badge.b3{bottom:30px;left:-6px;animation:float2 6.2s ease-in-out infinite .3s}
+  .badge.b1{top:30px;left:-28px;animation:float2 5s ease-in-out infinite}
+  .badge.b2{bottom:80px;right:-28px;animation:float2 5.6s ease-in-out infinite .6s}
+  .badge.b3{bottom:10px;left:-8px;animation:float2 6.2s ease-in-out infinite .3s}
   @keyframes float2{0%,100%{transform:translateY(0)}50%{transform:translateY(-12px)}}
-
-  /* ---------- Tech marquee ---------- */
-  .marquee-sec{position:relative;z-index:2;border-top:1px solid var(--line);border-bottom:1px solid var(--line);
-    padding:22px 0;margin-top:10px;background:rgba(255,255,255,.012);overflow:hidden}
-  .marquee-label{text-align:center;font-family:"JetBrains Mono";font-size:11px;letter-spacing:.18em;
-    text-transform:uppercase;color:var(--txt-dim);margin-bottom:16px}
-  .marquee{display:flex;gap:64px;width:max-content;animation:scroll 48s linear infinite}
+  .marquee-sec{position:relative;z-index:2;border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:22px 0;margin-top:10px;background:rgba(255,255,255,.012);overflow:hidden}
+  .marquee-label{text-align:center;font-family:"JetBrains Mono";font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--txt-dim);margin-bottom:16px}
+  .marquee{display:flex;gap:64px;width:max-content;animation:scroll 52s linear infinite}
   .marquee:hover{animation-play-state:paused}
   .marquee span{font-family:"Bricolage Grotesque";font-weight:600;font-size:21px;color:var(--txt-dim);white-space:nowrap;transition:.3s}
   .marquee span:hover{color:var(--txt)}
   @keyframes scroll{to{transform:translateX(-50%)}}
-
-  /* ---------- Reveal animation ---------- */
   .reveal{opacity:0;transform:translateY(24px);animation:rise .9s var(--ease) forwards}
   @keyframes rise{to{opacity:1;transform:none}}
-  .d1{animation-delay:.05s}.d2{animation-delay:.18s}.d3{animation-delay:.31s}
-  .d4{animation-delay:.44s}.d5{animation-delay:.57s}.d6{animation-delay:.7s}
-
-  /* ---------- Responsive ---------- */
+  .d1{animation-delay:.05s}.d2{animation-delay:.18s}.d3{animation-delay:.31s}.d4{animation-delay:.44s}.d5{animation-delay:.57s}
   @media(max-width:920px){
-    .hero-grid{grid-template-columns:1fr;gap:60px}
+    .hero-grid{grid-template-columns:1fr;gap:50px}
     .visual{order:-1}
     .nav-links,.nav-cta{display:none}
     .burger{display:flex}
     .hero{padding-top:120px;text-align:center}
     .pill,.cta-row,.stats{justify-content:center}
     .lead{margin-left:auto;margin-right:auto}
-    nav.open .nav-links{display:flex;position:absolute;top:74px;left:0;right:0;flex-direction:column;
-      gap:0;background:rgba(7,8,11,.97);backdrop-filter:blur(14px);border-bottom:1px solid var(--line);padding:8px 28px}
+    nav.open .nav-links{display:flex;position:absolute;top:74px;left:0;right:0;flex-direction:column;gap:0;background:rgba(7,8,11,.97);backdrop-filter:blur(14px);border-bottom:1px solid var(--line);padding:8px 28px}
     nav.open .nav-links a{padding:14px 0;border-bottom:1px solid var(--line-soft);width:100%}
+    .browser{max-width:340px;margin:0 auto}
+    .badge.b1{left:-4px}.badge.b2{right:-4px}
   }
-  @media(max-width:560px){
-    .badge.b1{left:-6px}.badge.b2{right:-6px}
-    .stats{gap:26px}
-    .stat .num{font-size:25px}
-  }
+  @media(max-width:560px){.stats{gap:26px}.stat .num{font-size:25px}}
 </style>
 </head>
 <body>
-
-<!-- Atmosphere -->
 <div class="bg-layer aurora"><span class="a1"></span><span class="a2"></span><span class="a3"></span></div>
 <div class="bg-layer grid-lines"></div>
 <div class="bg-layer grain"></div>
 
-<!-- Navigation -->
 <header id="header">
   <div class="wrap">
     <nav id="nav">
-      <a href="#" class="logo"><span class="dot"></span>Rahul<span style="color:var(--accent)">.</span></a>
+      <a href="#" class="logo"><span class="dot"></span>Kamlesh<span style="color:var(--accent)">.</span></a>
       <ul class="nav-links">
         <li><a href="#work">Work</a></li>
         <li><a href="#about">About</a></li>
@@ -234,515 +139,343 @@
   </div>
 </header>
 
-<!-- Hero -->
 <section class="hero">
   <div class="wrap">
     <div class="hero-grid">
-      <!-- Left: copy -->
       <div class="hero-copy">
         <span class="pill reveal d1"><span class="pulse"></span>Available for freelance &amp; full-time</span>
-
-        <h1 class="reveal d2">I build <span class="grad">beautiful</span><br>Android, iOS &amp; Flutter apps.</h1>
-        <div class="role-line reveal d2">&lt;/&gt; Mobile Engineer · Flutter · KMM · SwiftUI · Kotlin</div>
-
-        <p class="lead reveal d3">
-          Hi, I'm Rahul — <b>crafting exceptional mobile experiences with 10+ years of expertise in Flutter, KMM, SwiftUI and Kotlin.</b>
-          From idea to App Store, I help startups and businesses launch products people love to use.
-        </p>
-
+        <h1 class="reveal d2">I build <span class="grad">scalable</span><br>web apps &amp; platforms.</h1>
+        <div class="role-line reveal d2">&lt;/&gt; Full Stack &middot; PHP &middot; Laravel &middot; ReactJS &middot; Node.js &middot; AWS</div>
+        <p class="lead reveal d3">Hi, I'm <b>Kamlesh Kumar Jangir</b> &mdash; <b>crafting high-performance web solutions with 10+ years of full-stack expertise.</b> From MVPs to enterprise platforms, I help businesses build products that scale.</p>
         <div class="cta-row reveal d4">
           <a href="#work" class="btn btn-primary">View my work
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
           </a>
           <a href="#contact" class="btn btn-ghost">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M4 4h16v16H4z" opacity=".0"/><path d="M22 6 12 13 2 6"/><rect x="2" y="4" width="20" height="16" rx="2"/></svg>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M22 6 12 13 2 6"/></svg>
             Hire me
           </a>
         </div>
-
         <div class="stats reveal d5">
-          <div class="stat"><div class="num">100<span>+</span></div><div class="lbl">Apps shipped</div></div>
+          <div class="stat"><div class="num">100<span>+</span></div><div class="lbl">Projects delivered</div></div>
           <div class="stat"><div class="num">10<span>+</span></div><div class="lbl">Years experience</div></div>
-          <div class="stat"><div class="num">4.8<span>★</span></div><div class="lbl">Avg. store rating</div></div>
+          <div class="stat"><div class="num">50<span>+</span></div><div class="lbl">Happy clients</div></div>
         </div>
+      </div>
+      <div class="visual reveal d3">
+        <div class="browser-glow"></div>
+        <div class="browser">
+          <div class="browser-bar">
+            <div class="b-dots"><i class="d1"></i><i class="d2"></i><i class="d3"></i></div>
+            <div class="b-url">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+              myapp.com/api/products
+            </div>
+          </div>
+          <div class="code-area">
+            <span class="cl"><span class="c-ln">01</span><span class="c-cmt">// Laravel REST API</span></span>
+            <span class="cl"><span class="c-ln">02</span></span>
+            <span class="cl"><span class="c-ln">03</span><span class="c-key">public function </span><span class="c-fn">index</span><span class="c-var">(Request $request)</span></span>
+            <span class="cl"><span class="c-ln">04</span><span class="c-var">{</span></span>
+            <span class="cl"><span class="c-ln">05</span>&nbsp;&nbsp;<span class="c-var">$products = Product::</span><span class="c-fn">with</span><span class="c-var">([</span></span>
+            <span class="cl"><span class="c-ln">06</span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="c-str">'category'</span><span class="c-var">, </span><span class="c-str">'images'</span></span>
+            <span class="cl"><span class="c-ln">07</span>&nbsp;&nbsp;<span class="c-var">])-></span><span class="c-fn">paginate</span><span class="c-var">(20);</span></span>
+            <span class="cl"><span class="c-ln">08</span></span>
+            <span class="cl"><span class="c-ln">09</span>&nbsp;&nbsp;<span class="c-key">return </span><span class="c-fn">response</span><span class="c-var">()-></span><span class="c-fn">json</span><span class="c-var">([</span></span>
+            <span class="cl"><span class="c-ln">10</span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="c-str">'status'</span> <span class="c-var">=> </span><span class="c-str">'success'</span><span class="c-var">,</span></span>
+            <span class="cl"><span class="c-ln">11</span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="c-str">'data'</span>&nbsp;&nbsp; <span class="c-var">=> $products,</span></span>
+            <span class="cl"><span class="c-ln">12</span>&nbsp;&nbsp;<span class="c-var">]);</span></span>
+            <span class="cl"><span class="c-ln">13</span><span class="c-var">}</span></span>
+            <span class="cl"><span class="c-ln">14</span></span>
+            <span class="cl"><span class="c-ln">15</span><span class="c-cmt">// React hook</span></span>
+            <span class="cl"><span class="c-ln">16</span><span class="c-key">const </span><span class="c-fn">useProducts </span><span class="c-var">= () => {</span></span>
+            <span class="cl"><span class="c-ln">17</span>&nbsp;&nbsp;<span class="c-key">const </span><span class="c-var">[data, setData] = </span><span class="c-fn">useState</span><span class="c-var">([]);</span></span>
+            <span class="cl"><span class="c-ln">18</span>&nbsp;&nbsp;<span class="c-fn">useEffect</span><span class="c-var">(() => </span><span class="c-fn">fetchAll</span><span class="c-var">(), []);</span></span>
+            <span class="cl"><span class="c-ln">19</span>&nbsp;&nbsp;<span class="c-key">return </span><span class="c-var">{ data };</span></span>
+            <span class="cl"><span class="c-ln">20</span><span class="c-var">};</span></span>
+          </div>
+          <div class="browser-footer">
+            <span class="b-tag">PHP 8.2</span><span class="b-tag">Laravel 11</span><span class="b-tag">React 18</span><span class="b-tag">MySQL</span><span class="b-tag">AWS EC2</span>
+          </div>
+        </div>
+        <div class="badge b1"><i style="background:#38bdf8"></i>Laravel + ReactJS</div>
+        <div class="badge b2"><i style="background:#22d3ee"></i>AWS &middot; CI/CD &middot; RDS</div>
+        <div class="badge b3"><i style="background:#7dd3fc"></i>WordPress Expert</div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- Tech marquee -->
 <section class="marquee-sec">
-  <div class="marquee-label">Tools &amp; technologies I work with</div>
-  <div class="marquee" id="marquee">
-    <span>Flutter</span><span>Dart</span><span>Kotlin</span><span>KMM</span><span>SwiftUI</span><span>Java</span>
-    <span>Firebase</span><span>Riverpod</span><span>BLoC</span><span>GetX</span><span>Provider</span><span>Dio</span>
-    <span>REST APIs</span><span>GraphQL</span><span>Supabase</span><span>Android SDK</span><span>Jetpack Compose</span>
-    <span>Push Notifications</span><span>Stripe</span><span>Razorpay</span><span>PayU</span><span>Google Maps</span>
-    <span>Clean Architecture</span><span>Git</span><span>CI / CD</span><span>Figma</span><span>App Store</span><span>Play Store</span>
-    <span>Flutter</span><span>Dart</span><span>Kotlin</span><span>KMM</span><span>SwiftUI</span><span>Java</span>
-    <span>Firebase</span><span>Riverpod</span><span>BLoC</span><span>GetX</span><span>Provider</span><span>Dio</span>
-    <span>REST APIs</span><span>GraphQL</span><span>Supabase</span><span>Android SDK</span><span>Jetpack Compose</span>
-    <span>Push Notifications</span><span>Stripe</span><span>Razorpay</span><span>PayU</span><span>Google Maps</span>
-    <span>Clean Architecture</span><span>Git</span><span>CI / CD</span><span>Figma</span><span>App Store</span><span>Play Store</span>
+  <div class="marquee-label">Tools &amp; Technologies I work with</div>
+  <div class="marquee">
+    <span>PHP</span><span>Laravel</span><span>CodeIgniter</span><span>WordPress</span><span>ReactJS</span>
+    <span>Node.js</span><span>MySQL</span><span>PostgreSQL</span><span>MongoDB</span><span>AWS</span>
+    <span>VPS</span><span>RDS</span><span>GCM</span><span>Git</span><span>CI/CD</span>
+    <span>REST APIs</span><span>WooCommerce</span><span>Docker</span><span>Redis</span><span>Nginx</span>
+    <span>PHP</span><span>Laravel</span><span>CodeIgniter</span><span>WordPress</span><span>ReactJS</span>
+    <span>Node.js</span><span>MySQL</span><span>PostgreSQL</span><span>MongoDB</span><span>AWS</span>
+    <span>VPS</span><span>RDS</span><span>GCM</span><span>Git</span><span>CI/CD</span>
+    <span>REST APIs</span><span>WooCommerce</span><span>Docker</span><span>Redis</span><span>Nginx</span>
   </div>
 </section>
 
-<!-- ============ WORK / PROJECTS ============ -->
 <style>
   .work{position:relative;z-index:2;padding:110px 0 100px}
   .sec-head{max-width:640px;margin:0 auto 56px;text-align:center}
-  .kicker{display:inline-flex;align-items:center;gap:9px;font-family:"JetBrains Mono";font-size:12px;
-    letter-spacing:.16em;text-transform:uppercase;color:var(--accent)}
+  .kicker{display:inline-flex;align-items:center;gap:9px;font-family:"JetBrains Mono";font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--accent)}
   .kicker .bar{width:26px;height:1px;background:var(--accent)}
-  .sec-head h2{font-family:"Bricolage Grotesque";font-weight:700;letter-spacing:-.03em;line-height:1.05;
-    font-size:clamp(32px,4.6vw,52px);margin:16px 0 14px}
+  .sec-head h2{font-family:"Bricolage Grotesque";font-weight:700;letter-spacing:-.03em;line-height:1.05;font-size:clamp(32px,4.6vw,52px);margin:16px 0 14px}
   .sec-head p{color:var(--txt-mid);font-size:17px;max-width:540px;margin:0 auto}
-
   .work-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:26px}
-  .pcard{position:relative;border:1px solid var(--line);border-radius:24px;overflow:hidden;
-    background:linear-gradient(165deg,var(--surface),var(--bg-2));transition:.45s var(--ease);isolation:isolate}
-  .pcard::before{content:"";position:absolute;inset:0;z-index:-1;opacity:0;transition:.45s var(--ease);
-    background:radial-gradient(120% 100% at 50% 0%,var(--c-soft),transparent 70%)}
+  .pcard{position:relative;border:1px solid var(--line);border-radius:24px;overflow:hidden;background:linear-gradient(165deg,var(--surface),var(--bg-2));transition:.45s var(--ease);isolation:isolate}
+  .pcard::before{content:"";position:absolute;inset:0;z-index:-1;opacity:0;transition:.45s var(--ease);background:radial-gradient(120% 100% at 50% 0%,var(--c-soft),transparent 70%)}
   .pcard:hover{transform:translateY(-8px);border-color:var(--c-line);box-shadow:0 30px 70px -34px var(--c-soft)}
   .pcard:hover::before{opacity:1}
-
-  .pcard-preview{aspect-ratio:4 / 3;position:relative;overflow:hidden;display:flex;align-items:flex-end;justify-content:center;
-    background:radial-gradient(130% 120% at 50% -10%,var(--c-soft),transparent 60%)}
-  .mini{width:172px;height:200px;border-radius:26px 26px 0 0;background:linear-gradient(170deg,#0e1118,#0a0c12);
-    border:1px solid rgba(255,255,255,.07);border-bottom:0;padding:16px 13px;transition:.45s var(--ease);
-    box-shadow:0 -10px 40px -16px var(--c-soft)}
-  .pcard:hover .mini{transform:translateY(-10px)}
-  .mini .mhead{display:flex;justify-content:space-between;align-items:center;margin-bottom:12px}
-  .mini .mtitle{font-family:"Bricolage Grotesque";font-weight:600;font-size:13px}
-  .mini .mdot{width:26px;height:26px;border-radius:9px;background:var(--c)}
-  .mini .mcard{border-radius:13px;padding:11px;background:var(--c-soft);border:1px solid var(--c-line)}
-  .mini .mbig{font-family:"Bricolage Grotesque";font-weight:700;font-size:18px}
-  .mini .msmall{height:6px;width:60%;border-radius:3px;background:rgba(255,255,255,.12);margin-top:7px}
-  .mini .mbars{display:flex;gap:5px;align-items:flex-end;height:42px;margin-top:12px}
-  .mini .mbars i{flex:1;border-radius:4px 4px 2px 2px;background:var(--c);opacity:.85}
-  .mini .mlist{display:flex;flex-direction:column;gap:8px;margin-top:12px}
-  .mini .mrow{height:9px;border-radius:4px;background:rgba(255,255,255,.07)}
-
+  .pcard-preview{aspect-ratio:16/9;position:relative;overflow:hidden;background:radial-gradient(130% 120% at 50% -10%,var(--c-soft),transparent 60%)}
+  .pimg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center top;transition:.5s var(--ease)}
+  .pcard:hover .pimg{transform:scale(1.06)}
   .pcard-body{padding:24px 26px 28px}
   .pcat{font-family:"JetBrains Mono";font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--c)}
   .pcard-body h3{font-family:"Bricolage Grotesque";font-weight:600;font-size:22px;letter-spacing:-.02em;margin:8px 0 9px}
   .pcard-body p{color:var(--txt-mid);font-size:14.5px;line-height:1.55}
   .ptags{display:flex;flex-wrap:wrap;gap:7px;margin-top:16px}
-  .ptag{font-size:11.5px;padding:5px 11px;border-radius:999px;background:rgba(255,255,255,.04);
-    border:1px solid var(--line);color:var(--txt-mid);font-family:"JetBrains Mono"}
-  .plink{display:inline-flex;align-items:center;gap:7px;margin-top:20px;color:var(--txt);font-weight:600;
-    font-size:14px;text-decoration:none;transition:.3s}
+  .ptag{font-size:11.5px;padding:5px 11px;border-radius:999px;background:rgba(255,255,255,.04);border:1px solid var(--line);color:var(--txt-mid);font-family:"JetBrains Mono"}
+  .plink{display:inline-flex;align-items:center;gap:7px;margin-top:20px;color:var(--txt);font-weight:600;font-size:14px;text-decoration:none;transition:.3s}
   .plink svg{width:16px;height:16px;transition:.3s var(--ease)}
   .pcard:hover .plink{color:var(--c)}
   .pcard:hover .plink svg{transform:translateX(4px)}
-
   .work-foot{display:flex;justify-content:center;margin-top:54px}
-  .work-foot a{display:inline-flex;align-items:center;gap:10px;padding:14px 28px;border-radius:13px;
-    border:1px solid var(--line);background:rgba(255,255,255,.03);color:var(--txt);font-weight:600;
-    text-decoration:none;transition:.3s var(--ease)}
+  .work-foot a{display:inline-flex;align-items:center;gap:10px;padding:14px 28px;border-radius:13px;border:1px solid var(--line);background:rgba(255,255,255,.03);color:var(--txt);font-weight:600;text-decoration:none;transition:.3s var(--ease)}
   .work-foot a:hover{background:rgba(255,255,255,.07);transform:translateY(-3px);border-color:var(--accent)}
-
-  /* real project image */
-  .pimg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center;
-    transition:.5s var(--ease)}
-  .pcard:hover .pimg{transform:scale(1.06)}
-
-  /* scroll reveal */
   .sr{opacity:0;transform:translateY(34px);transition:.8s var(--ease)}
   .sr.in{opacity:1;transform:none}
-  .sr.s1{transition-delay:.06s}.sr.s2{transition-delay:.16s}
-  .sr.s3{transition-delay:.26s}.sr.s4{transition-delay:.36s}
-
+  .sr.s1{transition-delay:.06s}.sr.s2{transition-delay:.16s}.sr.s3{transition-delay:.26s}.sr.s4{transition-delay:.36s}
   @media(max-width:920px){.work-grid{grid-template-columns:1fr;gap:22px}.work{padding:80px 0 70px}}
-  @media(min-width:921px){
-    .work-grid > .pcard:last-child:nth-child(odd){grid-column:1 / -1;max-width:calc(50% - 13px);margin-inline:auto}
-  }
+  @media(min-width:921px){.work-grid>.pcard:last-child:nth-child(odd){grid-column:1 / -1;max-width:calc(50% - 13px);margin-inline:auto}}
 </style>
 
 <section class="work" id="work">
   <div class="wrap">
     <div class="sec-head sr">
       <span class="kicker"><span class="bar"></span>Selected Work</span>
-      <h2>Apps that ship — and people actually use.</h2>
-      <p>A few cross-platform products I've designed and built end-to-end. From the first wireframe to the final release on the App Store and Play Store.</p>
+      <h2>Projects that perform &mdash; and businesses love.</h2>
+      <p>Web platforms, e-commerce and SaaS products built end-to-end. From architecture to cloud deployment.</p>
     </div>
-
     <div class="work-grid">
-
-      <!-- 1 · Shoption (B2B irrigation trade platform) -->
       <article class="pcard sr s1" style="--c:#34c98a;--c-soft:rgba(52,201,138,.14);--c-line:rgba(52,201,138,.35)">
-        <div class="pcard-preview">
-          <img src="images/shoption.jpg" alt="Shoption — B2B irrigation trade app" class="pimg" onerror="this.style.display='none'">
-        </div>
+        <div class="pcard-preview"><img src="images/street10store.png" alt="Street10Store" class="pimg" style="object-fit:contain;object-position:center;background:#0d1117;" onerror="this.style.display='none'"></div>
         <div class="pcard-body">
-          <span class="pcat">B2C &amp; B2B · Trade Platform</span>
-          <h3>Shoption</h3>
-          <p>A B2C + B2B trade platform for irrigation — connecting farmers and dealers across India with 2 lakh+ products spanning motor-pumps, pipes, cables, drip systems and more.</p>
-          <div class="ptags"><span class="ptag">Flutter</span><span class="ptag">Riverpod</span><span class="ptag">Firebase</span><span class="ptag">Payments</span><span class="ptag">Push</span></div>
-          <div style="display:flex;gap:22px;flex-wrap:wrap;margin-top:20px">
-            <a href="projects/shoption.html" class="plink" style="margin-top:0">Case study
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-            <a href="https://play.google.com/store/apps/details?id=com.shoption.app" target="_blank" rel="noopener" class="plink" style="margin-top:0">Play Store
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-            <a href="https://apps.apple.com/in/app/shoption-for-irrigation-shops/id1544284156" target="_blank" rel="noopener" class="plink" style="margin-top:0">App Store
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-          </div>
+          <span class="pcat">E-commerce &middot; Full Stack Web App</span>
+          <h3>Street10Store</h3>
+          <p>Complete end-to-end e-commerce platform built on Laravel &mdash; customer storefront, member portal and a full-featured admin control center for catalog, orders and inventory management. Hosted on VPS.</p>
+          <div class="ptags"><span class="ptag">Laravel</span><span class="ptag">PHP</span><span class="ptag">MySQL</span><span class="ptag">VPS</span><span class="ptag">Admin Panel</span></div>
+          <a href="https://street10store.in/" target="_blank" rel="noopener" class="plink">Live site <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
         </div>
       </article>
-
-      <!-- 2 · TruNRI (community super-app) -->
       <article class="pcard sr s2" style="--c:#ff8a3c;--c-soft:rgba(255,138,60,.14);--c-line:rgba(255,138,60,.35)">
-        <div class="pcard-preview">
-          <img src="images/trunri.jpg" alt="TruNRI — community super-app" class="pimg" onerror="this.style.display='none'">
-        </div>
+        <div class="pcard-preview"><img src="images/trunri.jpg" alt="TruNRI" class="pimg" onerror="this.style.display='none'"></div>
         <div class="pcard-body">
-          <span class="pcat">Community · Social App</span>
+          <span class="pcat">Community &middot; Social Platform</span>
           <h3>TruNRI</h3>
-          <p>A one-stop super-app for Indian communities abroad — discover local services, businesses, events and connections, all in a single place. Available on Google Play and the App Store.</p>
-          <div class="ptags"><span class="ptag">Flutter</span><span class="ptag">Riverpod</span><span class="ptag">Firebase</span><span class="ptag">Chat</span><span class="ptag">Push</span></div>
-          <div style="display:flex;gap:22px;flex-wrap:wrap;margin-top:20px">
-            <a href="projects/trunri.html" class="plink" style="margin-top:0">Case study
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-            <a href="https://play.google.com/store/apps/details?id=com.trunri.app" target="_blank" rel="noopener" class="plink" style="margin-top:0">Play Store
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-            <a href="https://apps.apple.com/in/app/trunri/id6755464860" target="_blank" rel="noopener" class="plink" style="margin-top:0">App Store
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-          </div>
+          <p>Community web platform for the Indian diaspora abroad &mdash; local services, events and business discovery. Built with Node.js backend, ReactJS frontend and MySQL database, deployed on VPS.</p>
+          <div class="ptags"><span class="ptag">Node.js</span><span class="ptag">ReactJS</span><span class="ptag">MySQL</span><span class="ptag">VPS</span><span class="ptag">GCM</span></div>
+          <a href="projects/trunri.html" class="plink">Case study <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
         </div>
       </article>
-
-      <!-- 3 · Shaata (healthcare support for spiritual community) -->
-      <article class="pcard sr s3" style="--c:#5fc46a;--c-soft:rgba(95,196,106,.14);--c-line:rgba(95,196,106,.35)">
-        <div class="pcard-preview">
-          <img src="images/shaata.jpg" alt="Shaata — healthcare support app" class="pimg" onerror="this.style.display='none'">
-        </div>
+      <article class="pcard sr s3" style="--c:#2bb0e6;--c-soft:rgba(43,176,230,.14);--c-line:rgba(43,176,230,.35)">
+        <div class="pcard-preview"><img src="images/localhey.jpg" alt="Localhey" class="pimg" onerror="this.style.display='none'"></div>
         <div class="pcard-body">
-          <span class="pcat">Healthcare · Community</span>
-          <h3>Shaata</h3>
-          <p>A support platform for Munis &amp; Sadhus, helping the spiritual community search for doctors and hospitals nearby — with map-based discovery and consultation requests.</p>
-          <div class="ptags"><span class="ptag">Flutter</span><span class="ptag">GetX</span><span class="ptag">Firebase</span><span class="ptag">Maps</span><span class="ptag">Push</span></div>
-          <div style="display:flex;gap:22px;flex-wrap:wrap;margin-top:20px">
-            <a href="projects/shaata.html" class="plink" style="margin-top:0">Case study
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-            <a href="https://play.google.com/store/apps/details?id=com.kshaata.app&hl=en_IN" target="_blank" rel="noopener" class="plink" style="margin-top:0">Play Store
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-          </div>
-        </div>
-      </article>
-
-      <!-- 4 · Localhey (local discovery app) -->
-      <article class="pcard sr s4" style="--c:#2bb0e6;--c-soft:rgba(43,176,230,.14);--c-line:rgba(43,176,230,.35)">
-        <div class="pcard-preview">
-          <img src="images/localhey.jpg" alt="Localhey — local discovery app" class="pimg" onerror="this.style.display='none'">
-        </div>
-        <div class="pcard-body">
-          <span class="pcat">Local Discovery · Lifestyle</span>
+          <span class="pcat">Local Discovery &middot; Marketplace</span>
           <h3>Localhey</h3>
-          <p>Discover and experience everything local — places, food, businesses, events, culture and trending spots. A local-discovery app that helps you explore your city like never before.</p>
-          <div class="ptags"><span class="ptag">Flutter</span><span class="ptag">Provider</span><span class="ptag">Firebase</span><span class="ptag">PayU</span></div>
-          <div style="display:flex;gap:22px;flex-wrap:wrap;margin-top:20px">
-            <a href="projects/localhey.html" class="plink" style="margin-top:0">Case study
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-            <a href="https://play.google.com/store/apps/details?id=com.localhey.procart&hl=en_IN" target="_blank" rel="noopener" class="plink" style="margin-top:0">Play Store
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-          </div>
+          <p>Full-stack local discovery web platform with vendor dashboard, city explorer and payment integration. Built on Laravel, deployed on VPS with automated CI/CD pipelines.</p>
+          <div class="ptags"><span class="ptag">Laravel</span><span class="ptag">MySQL</span><span class="ptag">VPS</span><span class="ptag">PayU</span><span class="ptag">CI/CD</span></div>
+          <a href="projects/localhey.html" class="plink">Case study <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
         </div>
       </article>
-
-      <!-- 5 · Buyfyn (B2B marketplace) -->
-      <article class="pcard sr s1" style="--c:#b06ef0;--c-soft:rgba(176,110,240,.14);--c-line:rgba(176,110,240,.35)">
-        <div class="pcard-preview">
-          <img src="images/buyfyn.jpg" alt="Buyfyn — B2B marketplace app" class="pimg" onerror="this.style.display='none'">
-        </div>
+      <article class="pcard sr s4" style="--c:#b06ef0;--c-soft:rgba(176,110,240,.14);--c-line:rgba(176,110,240,.35)">
+        <div class="pcard-preview"><img src="images/buyfyn.jpg" alt="Buyfyn" class="pimg" onerror="this.style.display='none'"></div>
         <div class="pcard-body">
-          <span class="pcat">B2B · Marketplace</span>
+          <span class="pcat">B2B &middot; Marketplace</span>
           <h3>Buyfyn</h3>
-          <p>A B2B marketplace connecting wholesale buyers and sellers through a seamless inquiry → quotation → order workflow. Sellers manage catalogs and send smart quotations that auto-convert into confirmed orders on acceptance.</p>
-          <div class="ptags"><span class="ptag">Flutter</span><span class="ptag">BLoC</span><span class="ptag">Firebase</span><span class="ptag">Chat</span><span class="ptag">Push</span></div>
-          <div style="display:flex;gap:22px;flex-wrap:wrap;margin-top:20px">
-            <a href="projects/buyfyn.html" class="plink" style="margin-top:0">Case study
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-          </div>
+          <p>B2B wholesale marketplace with inquiry &rarr; quotation &rarr; order workflow. Laravel APIs, React admin panel and PostgreSQL on AWS RDS for scalable B2B commerce.</p>
+          <div class="ptags"><span class="ptag">Laravel</span><span class="ptag">ReactJS</span><span class="ptag">PostgreSQL</span><span class="ptag">RDS</span><span class="ptag">AWS</span></div>
+          <a href="projects/buyfyn.html" class="plink">Case study <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
         </div>
       </article>
-
-      <!-- 6 · Skep (RSA employment platform) -->
+      <article class="pcard sr s1" style="--c:#5fc46a;--c-soft:rgba(95,196,106,.14);--c-line:rgba(95,196,106,.35)">
+        <div class="pcard-preview"><img src="images/shaata.jpg" alt="Shaata" class="pimg" onerror="this.style.display='none'"></div>
+        <div class="pcard-body">
+          <span class="pcat">Healthcare &middot; Web Platform</span>
+          <h3>Shaata</h3>
+          <p>Healthcare web platform for spiritual communities &mdash; map-based doctor &amp; hospital discovery, consultation booking, admin panel and GCM push notifications. Built with CodeIgniter + MySQL.</p>
+          <div class="ptags"><span class="ptag">PHP</span><span class="ptag">CodeIgniter</span><span class="ptag">MySQL</span><span class="ptag">GCM</span><span class="ptag">Maps API</span></div>
+          <a href="projects/shaata.html" class="plink">Case study <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        </div>
+      </article>
       <article class="pcard sr s2" style="--c:#3b6ef0;--c-soft:rgba(59,110,240,.14);--c-line:rgba(59,110,240,.35)">
-        <div class="pcard-preview">
-          <img src="images/skep.jpg" alt="Skep — RSA employment platform" class="pimg" onerror="this.style.display='none'">
-        </div>
+        <div class="pcard-preview"><img src="images/skep.jpg" alt="Skep" class="pimg" onerror="this.style.display='none'"></div>
         <div class="pcard-body">
-          <span class="pcat">Employment · Enterprise</span>
-          <h3>Skep — RSA Employment</h3>
-          <p>An enterprise-ready employment platform, built end-to-end from concept to launch — with scalable Clean Architecture (Riverpod + Dio), pixel-perfect custom UIs, an advanced calendar/booking system and secure global session management.</p>
-          <div class="ptags"><span class="ptag">Flutter</span><span class="ptag">Riverpod</span><span class="ptag">Dio</span><span class="ptag">Firebase</span><span class="ptag">Push</span></div>
-          <div style="display:flex;gap:22px;flex-wrap:wrap;margin-top:20px">
-            <a href="projects/skep.html" class="plink" style="margin-top:0">Case study
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-            <a href="https://play.google.com/store/apps/details?id=com.benga.skep" target="_blank" rel="noopener" class="plink" style="margin-top:0">Play Store
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-            <a href="https://apps.apple.com/in/app/skep/id6767927463" target="_blank" rel="noopener" class="plink" style="margin-top:0">App Store
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-          </div>
+          <span class="pcat">Employment &middot; Enterprise Web App</span>
+          <h3>Skep &mdash; RSA Employment</h3>
+          <p>Enterprise employment platform with REST APIs, calendar/booking system, role-based admin panel and secure multi-session management deployed on AWS EC2 with CI/CD.</p>
+          <div class="ptags"><span class="ptag">Laravel</span><span class="ptag">Node.js</span><span class="ptag">ReactJS</span><span class="ptag">AWS</span><span class="ptag">CI/CD</span></div>
+          <a href="projects/skep.html" class="plink">Case study <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
         </div>
       </article>
-
-      <!-- 7 · Foodiefly (food delivery) -->
-      <article class="pcard sr s1" style="--c:#ff7a2e;--c-soft:rgba(255,122,46,.14);--c-line:rgba(255,122,46,.35)">
-        <div class="pcard-preview">
-          <img src="images/foodiefly.jpg" alt="Foodiefly — food delivery app" class="pimg" onerror="this.style.display='none'">
-        </div>
-        <div class="pcard-body">
-          <span class="pcat">Food Delivery · Marketplace</span>
-          <h3>Foodiefly</h3>
-          <p>An online food-delivery platform connecting food lovers with local restaurants, premium hotels and cloud kitchens. Order hot meals, juices and more — fresh, fast, and delivered right to your doorstep.</p>
-          <div class="ptags"><span class="ptag">Flutter</span><span class="ptag">Provider</span><span class="ptag">Firebase</span><span class="ptag">Push</span></div>
-          <div style="display:flex;gap:22px;flex-wrap:wrap;margin-top:20px">
-            <a href="https://play.google.com/store/apps/details?id=com.foodiefly.customer" target="_blank" rel="noopener" class="plink" style="margin-top:0">Play Store
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-          </div>
-        </div>
-      </article>
-
-      <!-- 8 · EPASES (event QR ticket scanner) -->
-      <article class="pcard sr s2" style="--c:#2f7df6;--c-soft:rgba(47,125,246,.14);--c-line:rgba(47,125,246,.35)">
-        <div class="pcard-preview">
-          <img src="images/epases.jpg" alt="EPASES — event QR ticket scanner" class="pimg" onerror="this.style.display='none'">
-        </div>
-        <div class="pcard-body">
-          <span class="pcat">Events · QR Ticket Scanner</span>
-          <h3>EPASES</h3>
-          <p>A cross-platform app for event ticketing and attendee management — REST-driven event and attendee lists with fast QR scanning, delivering a responsive, intuitive experience on both iOS and Android.</p>
-          <div class="ptags"><span class="ptag">Flutter</span><span class="ptag">Dart</span><span class="ptag">Provider</span><span class="ptag">REST</span><span class="ptag">Firebase</span></div>
-          <div style="display:flex;gap:22px;flex-wrap:wrap;margin-top:20px">
-            <a href="projects/epases.html" class="plink" style="margin-top:0">Case study
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-            <a href="https://apps.apple.com/in/app/epases/id6746796195" target="_blank" rel="noopener" class="plink" style="margin-top:0">App Store
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-          </div>
-        </div>
-      </article>
-
-      <!-- 9 · Naarii Jewels (jewellery e-commerce) -->
       <article class="pcard sr s3" style="--c:#c0274d;--c-soft:rgba(192,39,77,.16);--c-line:rgba(192,39,77,.4)">
-        <div class="pcard-preview">
-          <img src="images/naarii.jpg" alt="Naarii Jewels — jewellery e-commerce app" class="pimg" onerror="this.style.display='none'">
-        </div>
+        <div class="pcard-preview"><img src="images/naarii.jpg" alt="Naarii Jewels" class="pimg" onerror="this.style.display='none'"></div>
         <div class="pcard-body">
-          <span class="pcat">E-commerce · Jewellery</span>
+          <span class="pcat">E-commerce &middot; WooCommerce</span>
           <h3>Naarii Jewels</h3>
-          <p>A digital storefront for a silver and artificial-jewellery brand — browse a rich catalog, view product details and place orders right in the app, with GetX powering clean, reactive state management.</p>
-          <div class="ptags"><span class="ptag">Flutter</span><span class="ptag">GetX</span><span class="ptag">Firebase</span><span class="ptag">Push</span></div>
-          <div style="display:flex;gap:22px;flex-wrap:wrap;margin-top:20px">
-            <a href="projects/naarii.html" class="plink" style="margin-top:0">Case study
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-            <a href="https://play.google.com/store/apps/details?id=com.naari.jewells" target="_blank" rel="noopener" class="plink" style="margin-top:0">Play Store
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-            <a href="https://apps.apple.com/in/app/naarii-jewels/id6476127764" target="_blank" rel="noopener" class="plink" style="margin-top:0">App Store
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-          </div>
+          <p>High-converting e-commerce store for a jewellery brand &mdash; custom WordPress + WooCommerce theme, payment gateway integration and full inventory management on VPS.</p>
+          <div class="ptags"><span class="ptag">WordPress</span><span class="ptag">WooCommerce</span><span class="ptag">PHP</span><span class="ptag">MySQL</span><span class="ptag">VPS</span></div>
+          <a href="projects/naarii.html" class="plink">Case study <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
         </div>
       </article>
-
-      <!-- 10 · NiramayaSoul (holistic healthcare) -->
-      <article class="pcard sr s1" style="--c:#0d9488;--c-soft:rgba(13,148,136,.14);--c-line:rgba(13,148,136,.35)">
-        <div class="pcard-preview">
-          <img src="images/niramaya.png" alt="NiramayaSoul — holistic healthcare app" class="pimg" onerror="this.style.display='none'">
-        </div>
+      <article class="pcard sr s4" style="--c:#2f7df6;--c-soft:rgba(47,125,246,.14);--c-line:rgba(47,125,246,.35)">
+        <div class="pcard-preview"><img src="images/epases.jpg" alt="EPASES" class="pimg" onerror="this.style.display='none'"></div>
         <div class="pcard-body">
-          <span class="pcat">Healthcare · Wellness</span>
-          <h3>NiramayaSoul</h3>
-          <p>A holistic healthcare platform offering medicine delivery, doctor consultations, pathology and wellness services — within 24 hours, at affordable rates, across tier 1–4 cities in Jharkhand and West Bengal.</p>
-          <div class="ptags"><span class="ptag">Flutter</span><span class="ptag">GetX</span><span class="ptag">REST API</span><span class="ptag">Firebase</span></div>
-          <div style="display:flex;gap:22px;flex-wrap:wrap;margin-top:20px">
-            <a href="projects/niramayasoul.html" class="plink" style="margin-top:0">Case study
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-            <a href="https://play.google.com/store/apps/details?id=com.niramayasoul.customer&hl=en" target="_blank" rel="noopener" class="plink" style="margin-top:0">Play Store
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-            <a href="https://apps.apple.com/in/app/niramaya-soul/id6529532848" target="_blank" rel="noopener" class="plink" style="margin-top:0">App Store
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-          </div>
+          <span class="pcat">Events &middot; Web Platform</span>
+          <h3>EPASES</h3>
+          <p>Web-based event ticketing and attendee management platform &mdash; REST-driven event listings, QR ticket generation, scanning backend and full organiser dashboard on AWS.</p>
+          <div class="ptags"><span class="ptag">Laravel</span><span class="ptag">MySQL</span><span class="ptag">REST API</span><span class="ptag">AWS</span><span class="ptag">JS</span></div>
+          <a href="projects/epases.html" class="plink">Case study <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
         </div>
       </article>
-
+      <article class="pcard sr s1" style="--c:#0d9488;--c-soft:rgba(13,148,136,.14);--c-line:rgba(13,148,136,.35)">
+        <div class="pcard-preview"><img src="images/niramaya.png" alt="NiramayaSoul" class="pimg" onerror="this.style.display='none'"></div>
+        <div class="pcard-body">
+          <span class="pcat">Healthcare &middot; SaaS Platform</span>
+          <h3>NiramayaSoul</h3>
+          <p>Holistic healthcare web platform with medicine delivery, doctor consultations, pathology and wellness &mdash; multi-city support, doctor panel, admin dashboard and automated GCM notifications on AWS RDS.</p>
+          <div class="ptags"><span class="ptag">Laravel</span><span class="ptag">ReactJS</span><span class="ptag">MySQL</span><span class="ptag">GCM</span><span class="ptag">AWS RDS</span></div>
+          <a href="projects/niramayasoul.html" class="plink">Case study <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        </div>
+      </article>
     </div>
-
     <div class="work-foot sr">
-      <a href="#contact">Have a project in mind? Let's build it
+      <a href="#contact">Have a project in mind? Let's build it together
         <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
       </a>
     </div>
   </div>
 </section>
 
-<!-- ============ ABOUT ============ -->
 <style>
   .about{position:relative;z-index:2;padding:60px 0 100px}
   .about-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:54px;align-items:center}
-
-  /* portrait card */
   .portrait{position:relative}
-  .portrait-card{position:relative;border-radius:26px;overflow:hidden;border:1px solid var(--line);
-    aspect-ratio:4/5;background:
-      radial-gradient(120% 90% at 20% 0%,rgba(79,224,197,.22),transparent 55%),
-      radial-gradient(120% 90% at 100% 100%,rgba(91,124,250,.22),transparent 55%),
-      linear-gradient(165deg,var(--surface),var(--bg-2));
-    display:flex;align-items:center;justify-content:center}
-  /* replace .mono with: <img src="your-photo.jpg" style="width:100%;height:100%;object-fit:cover"> */
-  .mono{font-family:"Bricolage Grotesque";font-weight:800;font-size:160px;letter-spacing:-.05em;
-    background:linear-gradient(135deg,var(--accent),var(--accent-2));-webkit-background-clip:text;
-    background-clip:text;-webkit-text-fill-color:transparent;opacity:.9}
-  .portrait-card .ph-grid{position:absolute;inset:0;
-    background-image:linear-gradient(var(--line-soft) 1px,transparent 1px),linear-gradient(90deg,var(--line-soft) 1px,transparent 1px);
-    background-size:38px 38px;opacity:.5}
+  .portrait-card{position:relative;border-radius:26px;overflow:hidden;border:1px solid var(--line);aspect-ratio:4/5;background:radial-gradient(120% 90% at 20% 0%,rgba(56,189,248,.18),transparent 55%),radial-gradient(120% 90% at 100% 100%,rgba(34,211,238,.12),transparent 55%),linear-gradient(165deg,var(--surface),var(--bg-2));display:flex;align-items:center;justify-content:center}
+  .portrait-card .ph-grid{position:absolute;inset:0;background-image:linear-gradient(var(--line-soft) 1px,transparent 1px),linear-gradient(90deg,var(--line-soft) 1px,transparent 1px);background-size:38px 38px;opacity:.5}
   .info-chips{position:absolute;left:16px;right:16px;bottom:16px;display:flex;gap:10px;flex-wrap:wrap}
-  .ichip{display:flex;align-items:center;gap:7px;padding:9px 13px;border-radius:12px;font-size:12.5px;font-weight:500;
-    background:rgba(8,9,12,.7);backdrop-filter:blur(10px);border:1px solid var(--line);color:var(--txt-mid)}
+  .ichip{display:flex;align-items:center;gap:7px;padding:9px 13px;border-radius:12px;font-size:12.5px;font-weight:500;background:rgba(8,9,12,.7);backdrop-filter:blur(10px);border:1px solid var(--line);color:var(--txt-mid)}
   .ichip svg{width:14px;height:14px;color:var(--accent)}
-  .exp-badge{position:absolute;top:-18px;right:-18px;width:96px;height:96px;border-radius:50%;
-    background:linear-gradient(135deg,var(--accent),#7af0da);color:#04201b;display:flex;flex-direction:column;
-    align-items:center;justify-content:center;text-align:center;font-family:"Bricolage Grotesque";
-    box-shadow:0 16px 40px -14px var(--accent-glow);animation:float 6s ease-in-out infinite}
+  .exp-badge{position:absolute;top:-18px;right:-18px;width:96px;height:96px;border-radius:50%;background:linear-gradient(135deg,#38bdf8,#22d3ee);color:#030b1a;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;font-family:"Bricolage Grotesque";box-shadow:0 16px 40px -14px var(--accent-glow);animation:floatB 6s ease-in-out infinite}
   .exp-badge b{font-size:30px;font-weight:800;line-height:1}
   .exp-badge small{font-size:9.5px;font-weight:600;letter-spacing:.05em;margin-top:3px}
-
-  .about-copy h2{font-family:"Bricolage Grotesque";font-weight:700;letter-spacing:-.03em;line-height:1.08;
-    font-size:clamp(30px,4.2vw,46px);margin:16px 0 20px}
+  .about-copy h2{font-family:"Bricolage Grotesque";font-weight:700;letter-spacing:-.03em;line-height:1.08;font-size:clamp(30px,4.2vw,46px);margin:16px 0 20px}
   .about-copy h2 em{font-style:normal;color:var(--accent)}
   .about-copy p{color:var(--txt-mid);font-size:16.5px;line-height:1.7;margin-bottom:16px}
   .about-copy p b{color:var(--txt);font-weight:600}
-
   .values{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:28px}
-  .value{display:flex;gap:13px;align-items:flex-start;padding:16px;border:1px solid var(--line);
-    border-radius:15px;background:rgba(255,255,255,.02);transition:.35s var(--ease)}
-  .value:hover{border-color:var(--accent);transform:translateY(-3px);background:rgba(79,224,197,.04)}
-  .value .vico{flex-shrink:0;width:38px;height:38px;border-radius:11px;display:flex;align-items:center;justify-content:center;
-    background:rgba(79,224,197,.12);border:1px solid rgba(79,224,197,.25)}
+  .value{display:flex;gap:13px;align-items:flex-start;padding:16px;border:1px solid var(--line);border-radius:15px;background:rgba(255,255,255,.02);transition:.35s var(--ease)}
+  .value:hover{border-color:var(--accent);transform:translateY(-3px);background:rgba(56,189,248,.06)}
+  .value .vico{flex-shrink:0;width:38px;height:38px;border-radius:11px;display:flex;align-items:center;justify-content:center;background:rgba(56,189,248,.12);border:1px solid rgba(56,189,248,.25)}
   .value .vico svg{width:19px;height:19px;color:var(--accent)}
   .value h4{font-family:"Bricolage Grotesque";font-weight:600;font-size:15px;margin-bottom:3px}
   .value p{font-size:13px;color:var(--txt-dim);margin:0;line-height:1.5}
-
-  /* about stats */
   .about-stats{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:30px}
-  .astat{padding:18px 16px;border:1px solid var(--line);border-radius:16px;background:rgba(255,255,255,.02);
-    transition:.35s var(--ease)}
-  .astat:hover{border-color:var(--accent);transform:translateY(-4px);background:rgba(79,224,197,.04);
-    box-shadow:0 20px 44px -26px var(--accent-glow)}
-  .astat .an{font-family:"Bricolage Grotesque";font-weight:700;font-size:clamp(26px,3vw,34px);letter-spacing:-.02em;
-    background:linear-gradient(120deg,var(--accent),var(--accent-2));-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;line-height:1}
+  .astat{padding:18px 16px;border:1px solid var(--line);border-radius:16px;background:rgba(255,255,255,.02);transition:.35s var(--ease)}
+  .astat:hover{border-color:var(--accent);transform:translateY(-4px);background:rgba(56,189,248,.06);box-shadow:0 20px 44px -26px var(--accent-glow)}
+  .astat .an{font-family:"Bricolage Grotesque";font-weight:700;font-size:clamp(22px,2.8vw,32px);letter-spacing:-.02em;background:linear-gradient(120deg,var(--accent),var(--accent-2));-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;line-height:1}
   .astat .al{font-size:12.5px;color:var(--txt-dim);margin-top:7px}
-
-  .sign{display:flex;align-items:center;gap:16px;margin-top:30px}
-  .sign .sig{font-family:"Bricolage Grotesque";font-weight:700;font-size:26px;color:var(--txt);letter-spacing:-.02em;transform:rotate(-4deg)}
-  .sign .sig span{color:var(--accent)}
-  .sign .sig-note{font-size:13px;color:var(--txt-dim)}
-
-  @media(max-width:920px){
-    .about-grid{grid-template-columns:1fr;gap:44px}
-    .portrait{max-width:380px;margin:0 auto}
-    .about{padding:40px 0 70px}
-  }
+  @media(max-width:920px){.about-grid{grid-template-columns:1fr;gap:44px}.portrait{max-width:380px;margin:0 auto}.about{padding:40px 0 70px}}
   @media(max-width:560px){.values{grid-template-columns:1fr}.about-stats{grid-template-columns:1fr 1fr}}
 </style>
 
 <section class="about" id="about">
   <div class="wrap">
     <div class="about-grid">
-
-      <!-- Portrait / visual -->
       <div class="portrait sr s1">
         <div class="portrait-card">
           <div class="ph-grid"></div>
-          <img src="images/rahul.jpg" alt="Rahul Jangid" style="width:100%;height:100%;object-fit:cover;object-position:center">
+          <img src="images/kamlesh.jpg" alt="Kamlesh Kumar Jangir" style="width:100%;height:100%;object-fit:cover;object-position:center">
+          <div class="exp-badge"><b>10+</b><small>YRS EXP</small></div>
           <div class="info-chips">
-            <span class="ichip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s-7-5.5-7-11a7 7 0 0 1 14 0c0 5.5-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>Jaipur, India</span>
-            <span class="ichip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>Replies in a few hours</span>
+            <span class="ichip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s-7-5.5-7-11a7 7 0 0 1 14 0c0 5.5-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>India</span>
+            <span class="ichip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>Replies in hours</span>
           </div>
         </div>
       </div>
-
-      <!-- Story -->
       <div class="about-copy">
         <span class="kicker sr"><span class="bar"></span>About me</span>
-        <h2 class="sr s1">Turning ideas into<br><em>stunning apps</em>.</h2>
-        <p class="sr s2">I'm <b>Rahul Jangid</b>, Founder of <b>True Response Softech Pvt Ltd</b>, based in Jaipur, India. With over a decade of experience in mobile development, I specialize in creating high-performance, beautiful applications. My expertise spans <b>Flutter, Kotlin, KMM, Java and SwiftUI</b>.</p>
-        <p class="sr s2">Having delivered <b>100+ apps</b> for <b>50+ happy clients</b>, I believe in writing clean, maintainable code and staying at the forefront of mobile technology. From B2B platforms to local discovery apps, I've helped businesses transform their digital presence through exceptional mobile experiences.</p>
-
-        <div class="about-stats">
-          <div class="astat sr s3"><div class="an">100+</div><div class="al">Apps Delivered</div></div>
-          <div class="astat sr s3"><div class="an">10+</div><div class="al">Years Experience</div></div>
-          <div class="astat sr s4"><div class="an">1M+</div><div class="al">Users Reached</div></div>
-          <div class="astat sr s4"><div class="an">50+</div><div class="al">Happy Clients</div></div>
+        <h2 class="sr s1">Turning ideas into<br><em>powerful web products</em>.</h2>
+        <p class="sr s2">I'm <b>Kamlesh Kumar Jangir</b>, Founder of <a href="https://trsoftech.com/" target="_blank" rel="noopener" style="color:var(--accent);text-decoration:none;font-weight:600">True Response Softech Pvt Ltd</a> and a Full Stack Web Developer with over a decade of hands-on experience. I specialize in <b>PHP, Laravel, CodeIgniter, ReactJS, Node.js and WordPress</b> &mdash; across the full stack.</p>
+        <p class="sr s2">From deploying on <b>AWS EC2, RDS and VPS</b> to architecting robust MySQL, MongoDB and PostgreSQL databases, I handle the complete delivery pipeline including <b>Git workflows, CI/CD pipelines and GCM push infrastructure</b>. Previously Senior Web Developer at <a href="https://prolore.com" target="_blank" rel="noopener" style="color:var(--accent);text-decoration:none;font-weight:600">Prolore Search Marketing Pvt Ltd</a>.</p>
+        <div class="values sr s3">
+          <div class="value">
+            <div class="vico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg></div>
+            <div><h4>Full Stack</h4><p>Backend APIs to pixel-perfect frontend &mdash; end to end.</p></div>
+          </div>
+          <div class="value">
+            <div class="vico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 20V10M12 20V4M6 20v-6"/></svg></div>
+            <div><h4>Scalable Architecture</h4><p>AWS, RDS, VPS &mdash; built to handle growth.</p></div>
+          </div>
+          <div class="value">
+            <div class="vico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg></div>
+            <div><h4>Clean Code</h4><p>Maintainable, documented, tested codebase.</p></div>
+          </div>
+          <div class="value">
+            <div class="vico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg></div>
+            <div><h4>Fast Delivery</h4><p>CI/CD pipelines, Git flow and agile sprints.</p></div>
+          </div>
         </div>
-
+        <div class="about-stats sr s4">
+          <div class="astat"><div class="an">100+</div><div class="al">Projects Shipped</div></div>
+          <div class="astat"><div class="an">10+</div><div class="al">Years Experience</div></div>
+          <div class="astat"><div class="an">50+</div><div class="al">Happy Clients</div></div>
+          <div class="astat"><div class="an">5+</div><div class="al">AWS Deployments</div></div>
+        </div>
       </div>
-
     </div>
   </div>
 </section>
 
-<!-- ============ SKILLS ============ -->
 <style>
   .skills{position:relative;z-index:2;padding:80px 0 100px;overflow:hidden}
-  .skills::before{content:"";position:absolute;width:720px;height:720px;left:50%;top:-200px;
-    transform:translateX(-50%);pointer-events:none;
-    background:radial-gradient(circle,rgba(79,224,197,.10),rgba(91,124,250,.06) 40%,transparent 65%)}
+  .skills::before{content:"";position:absolute;width:720px;height:720px;left:50%;top:-200px;transform:translateX(-50%);pointer-events:none;background:radial-gradient(circle,rgba(56,189,248,.08),rgba(34,211,238,.05) 40%,transparent 65%)}
   .skills-head{text-align:center;margin-bottom:54px;position:relative}
   .skills-head .kicker{justify-content:center}
-  .skills-head h2{font-family:"Bricolage Grotesque";font-weight:700;letter-spacing:-.03em;
-    font-size:clamp(34px,5vw,58px);margin-top:16px}
-  .skills-head h2 em{font-style:normal;background:linear-gradient(105deg,var(--accent),var(--accent-2));
-    -webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+  .skills-head h2{font-family:"Bricolage Grotesque";font-weight:700;letter-spacing:-.03em;font-size:clamp(34px,5vw,58px);margin-top:16px}
+  .skills-head h2 em{font-style:normal;background:linear-gradient(105deg,var(--accent),var(--accent-2));-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
   .skills-head .sh-sub{color:var(--txt-dim);font-size:15.5px;margin-top:14px;max-width:540px;margin-inline:auto}
-
   .skills-cols{display:grid;grid-template-columns:1.06fr .94fr;gap:26px;align-items:stretch;position:relative}
-  .skill-panel{padding:34px 32px;border:1px solid var(--line);border-radius:24px;position:relative;overflow:hidden;
-    background:linear-gradient(165deg,rgba(255,255,255,.04),rgba(255,255,255,.012))}
-  .skill-panel::before{content:"";position:absolute;top:0;left:10%;right:10%;height:1px;
-    background:linear-gradient(90deg,transparent,var(--accent),transparent);opacity:.55}
-  .panel-title{display:flex;align-items:center;gap:11px;font-family:"Bricolage Grotesque";font-weight:700;
-    font-size:21px;letter-spacing:-.02em;margin-bottom:28px}
-  .panel-title .pt-dot{width:10px;height:10px;border-radius:3px;background:var(--accent);
-    box-shadow:0 0 14px var(--accent-glow);transform:rotate(45deg)}
-
-  /* core tech rows */
-  .skl{margin-bottom:22px}
-  .skl:last-child{margin-bottom:0}
+  .skill-panel{padding:34px 32px;border:1px solid var(--line);border-radius:24px;position:relative;overflow:hidden;background:linear-gradient(165deg,rgba(255,255,255,.04),rgba(255,255,255,.012))}
+  .skill-panel::before{content:"";position:absolute;top:0;left:10%;right:10%;height:1px;background:linear-gradient(90deg,transparent,var(--accent),transparent);opacity:.6}
+  .panel-title{display:flex;align-items:center;gap:11px;font-family:"Bricolage Grotesque";font-weight:700;font-size:21px;letter-spacing:-.02em;margin-bottom:28px}
+  .panel-title .pt-dot{width:10px;height:10px;border-radius:3px;background:var(--accent);box-shadow:0 0 14px var(--accent-glow);transform:rotate(45deg)}
+  .skl{margin-bottom:22px}.skl:last-child{margin-bottom:0}
   .skl-top{display:flex;align-items:center;gap:13px;margin-bottom:11px}
-  .skl-ico{width:40px;height:40px;border-radius:12px;flex-shrink:0;display:flex;align-items:center;justify-content:center;
-    font-family:"Bricolage Grotesque";font-weight:700;font-size:15px;color:var(--sc);
-    background:var(--scbg);border:1px solid var(--scbd)}
+  .skl-ico{width:40px;height:40px;border-radius:12px;flex-shrink:0;display:flex;align-items:center;justify-content:center;font-family:"Bricolage Grotesque";font-weight:700;font-size:14px;color:var(--sc);background:var(--scbg);border:1px solid var(--scbd)}
   .skl-meta{flex:1;display:flex;flex-direction:column;line-height:1.25;min-width:0}
   .skl-name{font-family:"Bricolage Grotesque";font-weight:600;font-size:16.5px}
   .skl-desc{color:var(--txt-dim);font-size:13px;margin-top:2px}
   .skl-pct{font-family:"JetBrains Mono";font-size:13.5px;font-weight:500;color:var(--sc);flex-shrink:0}
   .skillbar{height:8px;border-radius:99px;background:rgba(255,255,255,.06);overflow:hidden;position:relative}
-  .skillbar i{display:block;height:100%;width:0;border-radius:99px;position:relative;
-    background:linear-gradient(90deg,var(--sc),var(--accent));box-shadow:0 0 14px -2px var(--sc);
-    transition:width 1.5s var(--ease) .2s}
+  .skillbar i{display:block;height:100%;width:0;border-radius:99px;position:relative;background:linear-gradient(90deg,var(--sc),var(--accent));box-shadow:0 0 14px -2px var(--sc);transition:width 1.5s var(--ease) .2s}
   .sr.in .skillbar i{width:var(--w)}
-  .skillbar i::after{content:"";position:absolute;inset:0;border-radius:99px;
-    background:linear-gradient(90deg,transparent,rgba(255,255,255,.5),transparent);
-    transform:translateX(-110%);animation:shimmer 3s ease-in-out infinite;animation-delay:1.6s}
+  .skillbar i::after{content:"";position:absolute;inset:0;border-radius:99px;background:linear-gradient(90deg,transparent,rgba(255,255,255,.5),transparent);transform:translateX(-110%);animation:shimmer 3s ease-in-out infinite;animation-delay:1.6s}
   @keyframes shimmer{0%{transform:translateX(-110%)}55%,100%{transform:translateX(220%)}}
-
-  /* additional skills */
   .more-skills{display:flex;flex-direction:column}
   .add-chips{display:flex;flex-wrap:wrap;gap:11px}
-  .add-chips span{display:inline-flex;align-items:center;gap:8px;font-size:14px;padding:10px 16px;border-radius:999px;
-    background:rgba(255,255,255,.035);border:1px solid var(--line);color:var(--txt-mid);
-    transition:.3s var(--ease);cursor:default}
+  .add-chips span{display:inline-flex;align-items:center;gap:8px;font-size:14px;padding:10px 16px;border-radius:999px;background:rgba(255,255,255,.035);border:1px solid var(--line);color:var(--txt-mid);transition:.3s var(--ease);cursor:default}
   .add-chips span::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--accent);opacity:.55;transition:.3s}
-  .add-chips span:hover{border-color:var(--accent);background:rgba(79,224,197,.08);color:#fff;
-    transform:translateY(-3px);box-shadow:0 12px 26px -14px var(--accent-glow)}
+  .add-chips span:hover{border-color:var(--accent);background:rgba(56,189,248,.08);color:#fff;transform:translateY(-3px);box-shadow:0 12px 26px -14px var(--accent-glow)}
   .add-chips span:hover::before{opacity:1;box-shadow:0 0 8px var(--accent)}
   .ms-note{margin-top:auto;padding-top:26px;display:flex;align-items:center;gap:10px;color:var(--txt-dim);font-size:13.5px}
   .ms-note svg{width:17px;height:17px;color:var(--accent);flex-shrink:0}
-
-  @media(max-width:920px){
-    .skills-cols{grid-template-columns:1fr;gap:22px}
-    .skills{padding:56px 0 70px}
-  }
+  @media(max-width:920px){.skills-cols{grid-template-columns:1fr;gap:22px}.skills{padding:56px 0 70px}}
 </style>
 
 <section class="skills" id="skills">
@@ -750,86 +483,72 @@
     <div class="skills-head">
       <span class="kicker sr"><span class="bar"></span>Expertise</span>
       <h2 class="sr s1">Skills &amp; <em>Technologies</em></h2>
-      <p class="sh-sub sr s2">A decade of building mobile products end-to-end — across native and cross-platform stacks.</p>
+      <p class="sh-sub sr s2">A decade of building full-stack web products &mdash; backend APIs, scalable databases, cloud infrastructure and modern frontends.</p>
     </div>
-
     <div class="skills-cols">
-      <!-- Core technologies -->
       <div class="skill-panel sr s1">
         <h3 class="panel-title"><span class="pt-dot"></span>Core Technologies</h3>
-
-        <div class="skl sr s1" style="--sc:#45d1fd;--scbg:rgba(69,209,253,.14);--scbd:rgba(69,209,253,.34)">
-          <div class="skl-top"><span class="skl-ico">Fl</span><div class="skl-meta"><span class="skl-name">Flutter</span><span class="skl-desc">Cross-platform UI framework</span></div><span class="skl-pct">95%</span></div>
+        <div class="skl sr s1" style="--sc:#777bb4;--scbg:rgba(119,123,180,.14);--scbd:rgba(119,123,180,.34)">
+          <div class="skl-top"><span class="skl-ico">PHP</span><div class="skl-meta"><span class="skl-name">PHP</span><span class="skl-desc">Backend development &middot; 10+ years</span></div><span class="skl-pct">97%</span></div>
+          <div class="skillbar"><i style="--w:97%"></i></div>
+        </div>
+        <div class="skl sr s2" style="--sc:#f05340;--scbg:rgba(240,83,64,.14);--scbd:rgba(240,83,64,.34)">
+          <div class="skl-top"><span class="skl-ico">Lv</span><div class="skl-meta"><span class="skl-name">Laravel</span><span class="skl-desc">PHP framework &middot; REST APIs</span></div><span class="skl-pct">95%</span></div>
           <div class="skillbar"><i style="--w:95%"></i></div>
         </div>
-        <div class="skl sr s2" style="--sc:#b06ef0;--scbg:rgba(176,110,240,.14);--scbd:rgba(176,110,240,.34)">
-          <div class="skl-top"><span class="skl-ico">Kt</span><div class="skl-meta"><span class="skl-name">Kotlin</span><span class="skl-desc">Modern Android development</span></div><span class="skl-pct">92%</span></div>
-          <div class="skillbar"><i style="--w:92%"></i></div>
+        <div class="skl sr s2" style="--sc:#21759b;--scbg:rgba(33,117,155,.14);--scbd:rgba(33,117,155,.34)">
+          <div class="skl-top"><span class="skl-ico">WP</span><div class="skl-meta"><span class="skl-name">WordPress</span><span class="skl-desc">CMS &middot; WooCommerce &middot; custom themes</span></div><span class="skl-pct">96%</span></div>
+          <div class="skillbar"><i style="--w:96%"></i></div>
         </div>
-        <div class="skl sr s2" style="--sc:#ff7a4d;--scbg:rgba(255,122,77,.14);--scbd:rgba(255,122,77,.34)">
-          <div class="skl-top"><span class="skl-ico">Sw</span><div class="skl-meta"><span class="skl-name">SwiftUI</span><span class="skl-desc">Native iOS development</span></div><span class="skl-pct">85%</span></div>
-          <div class="skillbar"><i style="--w:85%"></i></div>
+        <div class="skl sr s3" style="--sc:#45d1fd;--scbg:rgba(69,209,253,.14);--scbd:rgba(69,209,253,.34)">
+          <div class="skl-top"><span class="skl-ico">Re</span><div class="skl-meta"><span class="skl-name">ReactJS</span><span class="skl-desc">Modern frontend &middot; SPA &amp; dashboards</span></div><span class="skl-pct">90%</span></div>
+          <div class="skillbar"><i style="--w:90%"></i></div>
         </div>
-        <div class="skl sr s3" style="--sc:#5b8cff;--scbg:rgba(91,140,255,.14);--scbd:rgba(91,140,255,.34)">
-          <div class="skl-top"><span class="skl-ico">KM</span><div class="skl-meta"><span class="skl-name">KMM</span><span class="skl-desc">Kotlin Multiplatform Mobile</span></div><span class="skl-pct">88%</span></div>
+        <div class="skl sr s3" style="--sc:#68a063;--scbg:rgba(104,160,99,.14);--scbd:rgba(104,160,99,.34)">
+          <div class="skl-top"><span class="skl-ico">Nd</span><div class="skl-meta"><span class="skl-name">Node.js</span><span class="skl-desc">Server-side JS &middot; real-time apps</span></div><span class="skl-pct">88%</span></div>
           <div class="skillbar"><i style="--w:88%"></i></div>
         </div>
-        <div class="skl sr s3" style="--sc:#2bd4c0;--scbg:rgba(43,212,192,.14);--scbd:rgba(43,212,192,.34)">
-          <div class="skl-top"><span class="skl-ico">Dt</span><div class="skl-meta"><span class="skl-name">Dart</span><span class="skl-desc">Flutter's programming language</span></div><span class="skl-pct">93%</span></div>
-          <div class="skillbar"><i style="--w:93%"></i></div>
-        </div>
         <div class="skl sr s4" style="--sc:#f6a020;--scbg:rgba(246,160,32,.14);--scbd:rgba(246,160,32,.34)">
-          <div class="skl-top"><span class="skl-ico">Jv</span><div class="skl-meta"><span class="skl-name">Java</span><span class="skl-desc">Android &amp; backend services</span></div><span class="skl-pct">87%</span></div>
-          <div class="skillbar"><i style="--w:87%"></i></div>
+          <div class="skl-top"><span class="skl-ico">AWS</span><div class="skl-meta"><span class="skl-name">AWS / Cloud</span><span class="skl-desc">EC2 &middot; RDS &middot; S3 &middot; VPS</span></div><span class="skl-pct">85%</span></div>
+          <div class="skillbar"><i style="--w:85%"></i></div>
         </div>
       </div>
-
-      <!-- Additional skills -->
       <div class="skill-panel more-skills sr s2">
         <h3 class="panel-title"><span class="pt-dot"></span>Additional Skills</h3>
         <div class="add-chips">
-          <span>Android SDK</span><span>iOS Development</span><span>Firebase</span><span>REST APIs</span>
-          <span>GraphQL</span><span>Git</span><span>CI/CD</span><span>App Store Optimization</span>
-          <span>UI/UX Design</span><span>Agile/Scrum</span><span>Unit Testing</span><span>Clean Architecture</span>
-          <span>Riverpod</span><span>BLoC</span><span>GetX</span><span>Provider</span>
-          <span>Jetpack Compose</span><span>Push Notifications</span><span>Dio</span><span>Figma</span>
+          <span>CodeIgniter</span><span>MySQL</span><span>MongoDB</span><span>PostgreSQL</span>
+          <span>RDS</span><span>VPS</span><span>GCM / FCM</span><span>Git &amp; GitHub</span>
+          <span>CI/CD</span><span>Docker</span><span>Nginx</span><span>Redis</span>
+          <span>REST APIs</span><span>WooCommerce</span><span>Tailwind CSS</span>
+          <span>HTML5 &amp; CSS3</span><span>JavaScript ES6+</span><span>Linux</span><span>Agile / Scrum</span>
         </div>
         <div class="ms-note">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m12 2 2.4 7.4H22l-6 4.6 2.3 7.4-6.3-4.6L5.7 21.4 8 14 2 9.4h7.6z"/></svg>
-          Always exploring new tools to ship better, faster products.
+          Always learning new tools to ship better, more scalable web products.
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ============ EXPERIENCE ============ -->
 <style>
   .exp-sec{position:relative;z-index:2;padding:70px 0 90px}
   .exp-head{text-align:center;margin-bottom:60px}
   .exp-head .kicker{justify-content:center}
-  .exp-head h2{font-family:"Bricolage Grotesque";font-weight:700;letter-spacing:-.03em;
-    font-size:clamp(34px,5vw,58px);margin-top:16px}
-  .exp-head h2 em{font-style:normal;background:linear-gradient(105deg,var(--accent),var(--accent-2));
-    -webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
-
+  .exp-head h2{font-family:"Bricolage Grotesque";font-weight:700;letter-spacing:-.03em;font-size:clamp(34px,5vw,58px);margin-top:16px}
+  .exp-head h2 em{font-style:normal;background:linear-gradient(105deg,var(--accent),var(--accent-2));-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
   .timeline{position:relative;max-width:760px;margin:0 auto;padding-left:34px}
-  .timeline::before{content:"";position:absolute;left:6px;top:8px;bottom:8px;width:2px;
-    background:linear-gradient(var(--accent),var(--accent-2),transparent)}
+  .timeline::before{content:"";position:absolute;left:6px;top:8px;bottom:8px;width:2px;background:linear-gradient(var(--accent),var(--accent-2),transparent)}
   .exp{position:relative;padding-bottom:42px}
   .exp:last-child{padding-bottom:0}
-  .exp::before{content:"";position:absolute;left:-34px;top:5px;width:14px;height:14px;border-radius:50%;
-    background:var(--bg);border:2px solid var(--accent);box-shadow:0 0 0 4px rgba(79,224,197,.12);
-    transform:translateX(-1px)}
+  .exp::before{content:"";position:absolute;left:-34px;top:5px;width:14px;height:14px;border-radius:50%;background:var(--bg);border:2px solid var(--accent);box-shadow:0 0 0 4px rgba(79,224,197,.12);transform:translateX(-1px)}
   .exp-year{font-family:"JetBrains Mono";font-size:13px;letter-spacing:.04em;color:var(--accent);margin-bottom:7px}
   .exp-role{font-family:"Bricolage Grotesque";font-weight:700;font-size:21px;letter-spacing:-.02em}
   .exp-co{font-size:15px;color:var(--txt-mid);margin-top:2px;font-weight:500}
   .exp-desc{color:var(--txt-dim);font-size:15px;line-height:1.65;margin-top:12px;max-width:580px}
   .exp-tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px}
-  .exp-tags span{font-size:12px;padding:6px 13px;border-radius:999px;background:rgba(255,255,255,.04);
-    border:1px solid var(--line);color:var(--txt-mid);font-family:"JetBrains Mono";transition:.25s}
+  .exp-tags span{font-size:12px;padding:6px 13px;border-radius:999px;background:rgba(255,255,255,.04);border:1px solid var(--line);color:var(--txt-mid);font-family:"JetBrains Mono";transition:.25s}
   .exp-tags span:hover{color:var(--txt);border-color:var(--accent)}
-
   @media(max-width:920px){.exp-sec{padding:50px 0 60px}}
 </style>
 
@@ -839,61 +558,47 @@
       <span class="kicker sr"><span class="bar"></span>Career</span>
       <h2 class="sr s1">Work <em>Experience</em></h2>
     </div>
-
     <div class="timeline">
       <div class="exp sr s1">
-        <div class="exp-year">2021 — Present</div>
-        <div class="exp-role">Founder</div>
-        <div class="exp-co">True Response Softech Pvt Ltd</div>
-        <p class="exp-desc">Leading the company and delivering high-quality mobile solutions using Flutter, Kotlin, KMM and SwiftUI. Building scalable cross-platform applications for diverse clients.</p>
-        <div class="exp-tags"><span>Flutter</span><span>Kotlin</span><span>KMM</span><span>SwiftUI</span><span>Java</span></div>
+        <div class="exp-year">2022 &mdash; Present</div>
+        <div class="exp-role">Founder &amp; Full Stack Web Developer</div>
+        <div class="exp-co"><a href="https://trsoftech.com/" target="_blank" rel="noopener" style="color:var(--accent);text-decoration:none">True Response Softech Pvt Ltd</a></div>
+        <p class="exp-desc">Founded and leading a software company delivering end-to-end web solutions for clients across India and globally. Architecting Laravel + ReactJS SaaS platforms, WordPress/WooCommerce stores, deploying on AWS EC2/RDS, setting up CI/CD pipelines and managing multi-database environments (MySQL, MongoDB, PostgreSQL).</p>
+        <div class="exp-tags"><span>Laravel</span><span>ReactJS</span><span>Node.js</span><span>WordPress</span><span>AWS</span><span>MySQL</span><span>CI/CD</span></div>
       </div>
-
       <div class="exp sr s2">
-        <div class="exp-year">2019 — 2021</div>
-        <div class="exp-role">Senior Mobile Developer</div>
-        <div class="exp-co">Airsky Cloud Network Pvt Ltd</div>
-        <p class="exp-desc">Led the mobile development team, building enterprise applications using Kotlin, Java and Flutter. Delivered multiple successful apps to production.</p>
-        <div class="exp-tags"><span>Kotlin</span><span>Java</span><span>Flutter</span><span>Firebase</span></div>
+        <div class="exp-year">2015 &mdash; 2022</div>
+        <div class="exp-role">Senior Web Developer</div>
+        <div class="exp-co"><a href="https://prolore.com" target="_blank" rel="noopener" style="color:var(--accent);text-decoration:none">Prolore Search Marketing Pvt Ltd</a></div>
+        <p class="exp-desc">Worked as Senior Web Developer building and maintaining web applications, SEO-driven portals and digital marketing platforms. Led backend development using PHP, CodeIgniter and Laravel. Built REST APIs, e-commerce solutions on WordPress/WooCommerce, managed VPS deployments and handled database optimization for high-traffic portals.</p>
+        <div class="exp-tags"><span>PHP</span><span>Laravel</span><span>CodeIgniter</span><span>WordPress</span><span>MySQL</span><span>VPS</span><span>REST APIs</span></div>
       </div>
-
       <div class="exp sr s3">
-        <div class="exp-year">2015 — 2019</div>
-        <div class="exp-role">Android App Developer</div>
-        <div class="exp-co">Prolore Search Marketing Pvt Ltd</div>
-        <p class="exp-desc">Developed native Android applications from scratch using Java and Kotlin. Implemented complex UI/UX designs and integrated third-party services.</p>
-        <div class="exp-tags"><span>Java</span><span>Kotlin</span><span>Android SDK</span><span>REST APIs</span></div>
+        <div class="exp-year">2013 &mdash; 2015</div>
+        <div class="exp-role">PHP Web Developer</div>
+        <div class="exp-co">Web Development Agency</div>
+        <p class="exp-desc">Started career building dynamic websites and CMS platforms using core PHP and MySQL. Developed custom WordPress themes and plugins, responsive HTML/CSS designs and server-side scripting for various clients.</p>
+        <div class="exp-tags"><span>PHP</span><span>MySQL</span><span>WordPress</span><span>HTML5</span><span>CSS3</span><span>JavaScript</span></div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ============ TESTIMONIALS ============ -->
 <style>
   .testi{position:relative;z-index:2;padding:70px 0 90px}
   .testi-head{text-align:center;margin-bottom:56px}
   .testi-head .kicker{justify-content:center}
-  .testi-head h2{font-family:"Bricolage Grotesque";font-weight:700;letter-spacing:-.03em;
-    font-size:clamp(34px,5vw,58px);margin-top:16px}
-  .testi-head h2 em{font-style:normal;background:linear-gradient(105deg,var(--accent),var(--accent-2));
-    -webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
-
+  .testi-head h2{font-family:"Bricolage Grotesque";font-weight:700;letter-spacing:-.03em;font-size:clamp(34px,5vw,58px);margin-top:16px}
+  .testi-head h2 em{font-style:normal;background:linear-gradient(105deg,var(--accent),var(--accent-2));-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
   .testi-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:24px;align-items:stretch}
-  .tcard{display:flex;flex-direction:column;position:relative;overflow:hidden;
-    padding:32px 30px;border:1px solid var(--line);border-radius:22px;
-    background:linear-gradient(165deg,var(--surface),var(--bg-2));transition:.4s var(--ease)}
+  .tcard{display:flex;flex-direction:column;position:relative;overflow:hidden;padding:32px 30px;border:1px solid var(--line);border-radius:22px;background:linear-gradient(165deg,var(--surface),var(--bg-2));transition:.4s var(--ease)}
   .tcard:hover{transform:translateY(-6px);border-color:var(--accent);box-shadow:0 26px 56px -30px var(--accent-glow)}
-  .tcard .qmark{position:absolute;top:14px;right:22px;font-family:"Bricolage Grotesque";font-weight:800;
-    font-size:64px;line-height:1;color:var(--accent);opacity:.16}
+  .tcard .qmark{position:absolute;top:14px;right:22px;font-family:"Bricolage Grotesque";font-weight:800;font-size:64px;line-height:1;color:var(--accent);opacity:.16}
   .tcard .quote{color:var(--txt-mid);font-size:16px;line-height:1.65;position:relative;z-index:1}
   .tperson{display:flex;align-items:center;gap:14px;margin-top:auto;padding-top:24px}
-  .tav{width:48px;height:48px;border-radius:50%;flex-shrink:0;display:flex;align-items:center;justify-content:center;
-    font-family:"Bricolage Grotesque";font-weight:700;font-size:20px;
-    background:linear-gradient(135deg,rgba(79,224,197,.2),rgba(91,124,250,.2));
-    border:1px solid var(--line);color:var(--accent)}
+  .tav{width:48px;height:48px;border-radius:50%;flex-shrink:0;display:flex;align-items:center;justify-content:center;font-family:"Bricolage Grotesque";font-weight:700;font-size:20px;background:linear-gradient(135deg,rgba(56,189,248,.2),rgba(34,211,238,.2));border:1px solid var(--line);color:var(--accent)}
   .tperson .tname{font-family:"Bricolage Grotesque";font-weight:600;font-size:16px;color:var(--txt)}
   .tperson .trole{font-size:13.5px;color:var(--txt-dim);margin-top:1px}
-
   @media(max-width:760px){.testi-grid{grid-template-columns:1fr}.testi{padding:50px 0 60px}}
 </style>
 
@@ -903,57 +608,45 @@
       <span class="kicker sr"><span class="bar"></span>Testimonials</span>
       <h2 class="sr s1">What Clients <em>Say</em></h2>
     </div>
-
     <div class="testi-grid">
       <div class="tcard sr s1">
         <span class="qmark">&rdquo;</span>
-        <p class="quote">"Amazing developer! Always communicative, responsive, and available. He delivered everything I asked for quickly and with great attention to detail. Super professional and easy to work with."</p>
-        <div class="tperson"><span class="tav">R</span><div><div class="tname">Roberto M</div><div class="trole">Epases Event QR Scanner</div></div></div>
+        <p class="quote">"Kamlesh is an exceptional web developer. He built our entire platform from scratch &mdash; clean code, on time, great attention to detail. The API performance exceeded our expectations. Super professional and easy to work with."</p>
+        <div class="tperson"><span class="tav">R</span><div><div class="tname">Roberto M</div><div class="trole">Platform Owner, EPASES</div></div></div>
       </div>
-
       <div class="tcard sr s2">
         <span class="qmark">&rdquo;</span>
-        <p class="quote">"Awesome to work with, fitted well in our team and quality was good."</p>
-        <div class="tperson"><span class="tav">K</span><div><div class="tname">Kevin B</div><div class="trole">Towaway App</div></div></div>
+        <p class="quote">"Awesome to work with. Fitted perfectly in our team, delivered quality code and handled AWS deployment seamlessly. Will definitely hire again."</p>
+        <div class="tperson"><span class="tav">K</span><div><div class="tname">Kevin B</div><div class="trole">Tech Lead, Towaway</div></div></div>
       </div>
-
       <div class="tcard sr s3">
         <span class="qmark">&rdquo;</span>
-        <p class="quote">"Rahul's expertise in Flutter transformed our B2B irrigation platform. His dedication to delivering quality work is exceptional."</p>
+        <p class="quote">"Kamlesh built our B2B trade web platform with Laravel and React. The admin panel and vendor portal are rock solid. His expertise in full-stack development is exceptional."</p>
         <div class="tperson"><span class="tav">S</span><div><div class="tname">Sharad Kale</div><div class="trole">Founder, Shoption Pvt Ltd</div></div></div>
       </div>
-
       <div class="tcard sr s2">
         <span class="qmark">&rdquo;</span>
-        <p class="quote">"Professional and reliable. Rahul understood our requirements perfectly and delivered the Localhey app beyond expectations."</p>
+        <p class="quote">"Professional and reliable. Kamlesh understood our requirements perfectly, built a full-featured web platform on time and handled the VPS deployment without any issues."</p>
         <div class="tperson"><span class="tav">R</span><div><div class="tname">Ranjit Ramesh</div><div class="trole">Founder, Procart Industrial Solutions Pvt. Ltd.</div></div></div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ============ AVAILABLE FOR HIRE ============ -->
 <style>
   .hire{position:relative;z-index:2;padding:70px 0 60px;text-align:center}
   .hire .pill{margin:0 auto}
-  .hire h2{font-family:"Bricolage Grotesque";font-weight:700;letter-spacing:-.03em;
-    font-size:clamp(32px,5vw,56px);margin:22px 0 14px}
+  .hire h2{font-family:"Bricolage Grotesque";font-weight:700;letter-spacing:-.03em;font-size:clamp(32px,5vw,56px);margin:22px 0 14px}
   .hire .hire-sub{color:var(--txt-mid);font-size:17px;max-width:540px;margin:0 auto;line-height:1.6}
-
   .platforms{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;max-width:860px;margin:48px auto 0}
-  .pf{display:flex;flex-direction:column;align-items:center;gap:18px;padding:40px 24px;border-radius:22px;
-    border:1px solid var(--line);background:linear-gradient(165deg,var(--surface),var(--bg-2));
-    text-decoration:none;transition:.4s var(--ease);position:relative;overflow:hidden}
-  .pf::before{content:"";position:absolute;inset:0;opacity:0;transition:.4s var(--ease);
-    background:radial-gradient(120% 90% at 50% 0%,var(--pf-soft),transparent 65%)}
+  .pf{display:flex;flex-direction:column;align-items:center;gap:18px;padding:40px 24px;border-radius:22px;border:1px solid var(--line);background:linear-gradient(165deg,var(--surface),var(--bg-2));text-decoration:none;transition:.4s var(--ease);position:relative;overflow:hidden}
+  .pf::before{content:"";position:absolute;inset:0;opacity:0;transition:.4s var(--ease);background:radial-gradient(120% 90% at 50% 0%,var(--pf-soft),transparent 65%)}
   .pf:hover{transform:translateY(-8px);border-color:var(--pf-line);box-shadow:0 28px 60px -30px var(--pf-soft)}
   .pf:hover::before{opacity:1}
-  .pf-ico{width:84px;height:84px;border-radius:22px;display:flex;align-items:center;justify-content:center;
-    position:relative;z-index:1;transition:.4s var(--ease)}
+  .pf-ico{width:84px;height:84px;border-radius:22px;display:flex;align-items:center;justify-content:center;position:relative;z-index:1;transition:.4s var(--ease)}
   .pf:hover .pf-ico{transform:scale(1.06)}
   .pf-name{font-family:"Bricolage Grotesque";font-weight:600;font-size:20px;color:var(--txt);position:relative;z-index:1}
   .pf-foot{color:var(--txt-dim);font-size:14.5px;margin-top:40px}
-
   @media(max-width:760px){.platforms{grid-template-columns:1fr;max-width:340px}.pf{padding:32px 24px;flex-direction:row;justify-content:flex-start;gap:22px}.pf-ico{width:64px;height:64px;border-radius:18px}}
 </style>
 
@@ -961,58 +654,38 @@
   <div class="wrap">
     <span class="pill sr"><span class="pulse"></span>Available for Hire</span>
     <h2 class="sr s1">I'm Open to New Projects</h2>
-    <p class="hire-sub sr s2">Currently accepting remote and contract opportunities. Let's build something amazing together.</p>
-
+    <p class="hire-sub sr s2">Currently accepting remote and freelance opportunities. Let's build something great together.</p>
     <div class="platforms">
-      <!-- Upwork -->
-      <a href="https://www.upwork.com/freelancers/~017af4cdd0885fb04e?mp_source=share" target="_blank" rel="noopener" class="pf sr s1" style="--pf-soft:rgba(108,218,68,.14);--pf-line:rgba(108,218,68,.4)" aria-label="Hire me on Upwork">
-        <span class="pf-ico" style="overflow:hidden">
-          <img src="images/upwork.svg" alt="Upwork" style="width:100%;height:100%;object-fit:cover">
-        </span>
-        <span class="pf-name">Upwork</span>
-      </a>
-
-      <!-- Freelancer -->
-      <a href="https://www.freelancer.com/u/rahuljangid1993?sb=t" target="_blank" rel="noopener" class="pf sr s2" style="--pf-soft:rgba(41,178,254,.14);--pf-line:rgba(41,178,254,.4)" aria-label="Hire me on Freelancer">
+      <a href="https://www.freelancer.com/u/rahuljangid1993" target="_blank" rel="noopener" class="pf sr s1" style="--pf-soft:rgba(41,178,254,.14);--pf-line:rgba(41,178,254,.4)">
         <span class="pf-ico" style="background:#0e1320;border:1px solid var(--line)">
-          <img src="images/freelancer.svg" alt="Freelancer" style="width:58%;height:auto">
+          <img src="images/freelancer.svg" alt="Freelancer" style="width:62%;height:auto">
         </span>
         <span class="pf-name">Freelancer</span>
       </a>
-
-      <!-- Fiverr -->
-      <a href="https://www.fiverr.com/s/DB4Qz4A" target="_blank" rel="noopener" class="pf sr s3" style="--pf-soft:rgba(29,191,115,.14);--pf-line:rgba(29,191,115,.4)" aria-label="Hire me on Fiverr">
-        <span class="pf-ico" style="background:transparent">
-          <img src="images/fiverr.svg" alt="Fiverr" style="width:100%;height:100%">
-        </span>
+      <a href="https://www.upwork.com/freelancers/~017af4cdd0885fb04e?mp_source=share" target="_blank" rel="noopener" class="pf sr s2" style="--pf-soft:rgba(108,218,68,.14);--pf-line:rgba(108,218,68,.4)">
+        <span class="pf-ico" style="overflow:hidden"><img src="images/upwork.svg" alt="Upwork" style="width:100%;height:100%;object-fit:cover"></span>
+        <span class="pf-name">Upwork</span>
+      </a>
+      <a href="https://www.fiverr.com/rahul_trs" target="_blank" rel="noopener" class="pf sr s3" style="--pf-soft:rgba(29,191,115,.14);--pf-line:rgba(29,191,115,.4)">
+        <span class="pf-ico" style="background:transparent"><img src="images/fiverr.svg" alt="Fiverr" style="width:100%;height:100%"></span>
         <span class="pf-name">Fiverr</span>
       </a>
     </div>
-
     <p class="pf-foot sr">Feel free to reach out on your preferred platform.</p>
   </div>
 </section>
 
-<!-- ============ TEAM / COMPANY ============ -->
 <style>
   .team{position:relative;z-index:2;padding:30px 0 70px}
-  .team-card{position:relative;overflow:hidden;border:1px solid var(--line);border-radius:26px;
-    padding:50px 44px;text-align:center;
-    background:linear-gradient(165deg,rgba(79,224,197,.06),rgba(91,124,250,.06)),linear-gradient(165deg,var(--surface),var(--bg-2))}
-  .team-card::before{content:"";position:absolute;width:400px;height:400px;top:-180px;left:50%;
-    transform:translateX(-50%);pointer-events:none;
-    background:radial-gradient(circle,rgba(79,224,197,.18),transparent 65%);filter:blur(40px)}
+  .team-card{position:relative;overflow:hidden;border:1px solid var(--line);border-radius:26px;padding:50px 44px;text-align:center;background:linear-gradient(165deg,rgba(56,189,248,.06),rgba(34,211,238,.04)),linear-gradient(165deg,var(--surface),var(--bg-2))}
+  .team-card::before{content:"";position:absolute;width:400px;height:400px;top:-180px;left:50%;transform:translateX(-50%);pointer-events:none;background:radial-gradient(circle,rgba(56,189,248,.12),transparent 65%);filter:blur(40px)}
   .team-card .kicker{justify-content:center}
-  .team-card h2{font-family:"Bricolage Grotesque";font-weight:700;letter-spacing:-.03em;
-    font-size:clamp(28px,3.8vw,44px);margin:16px 0 16px}
+  .team-card h2{font-family:"Bricolage Grotesque";font-weight:700;letter-spacing:-.03em;font-size:clamp(28px,3.8vw,44px);margin:16px 0 16px}
   .team-card p{color:var(--txt-mid);font-size:17px;line-height:1.7;max-width:640px;margin:0 auto}
   .team-card p b{color:var(--txt);font-weight:600}
   .team-roles{display:flex;flex-wrap:wrap;justify-content:center;gap:10px;margin:28px 0 32px}
-  .team-roles span{font-size:13.5px;padding:8px 16px;border-radius:999px;background:rgba(255,255,255,.04);
-    border:1px solid var(--line);color:var(--txt-mid);font-family:"JetBrains Mono"}
-  .team-btn{display:inline-flex;align-items:center;gap:10px;padding:15px 28px;border-radius:13px;font-weight:600;
-    font-size:15px;text-decoration:none;background:linear-gradient(105deg,var(--accent),#7af0da);color:#04201b;
-    transition:.3s var(--ease);box-shadow:0 12px 34px -10px var(--accent-glow)}
+  .team-roles span{font-size:13.5px;padding:8px 16px;border-radius:999px;background:rgba(255,255,255,.04);border:1px solid var(--line);color:var(--txt-mid);font-family:"JetBrains Mono"}
+  .team-btn{display:inline-flex;align-items:center;gap:10px;padding:15px 28px;border-radius:13px;font-weight:600;font-size:15px;text-decoration:none;background:linear-gradient(105deg,#38bdf8,#22d3ee);color:#030b1a;transition:.3s var(--ease);box-shadow:0 12px 34px -10px var(--accent-glow)}
   .team-btn:hover{transform:translateY(-3px);box-shadow:0 20px 44px -12px var(--accent-glow)}
   .team-btn svg{width:17px;height:17px}
   @media(max-width:920px){.team-card{padding:38px 24px}.team{padding:20px 0 50px}}
@@ -1021,148 +694,125 @@
 <section class="team">
   <div class="wrap">
     <div class="team-card sr">
-      <span class="kicker"><span class="bar"></span>Beyond mobile</span>
-      <h2>Complete Digital Product Development</h2>
-      <p>From idea to launch, we provide end-to-end development services. While I primarily focus on mobile, I work with a dedicated team of <b>designers, web developers, backend engineers and QA specialists</b> to handle the whole journey.</p>
+      <span class="kicker"><span class="bar"></span>What I Offer</span>
+      <h2>Complete Web Development Services</h2>
+      <p>From backend API architecture to frontend UI, database design to cloud deployment &mdash; I handle the <b>complete development lifecycle</b>. Need a landing page, a complex SaaS, or an e-commerce store? I've got you covered.</p>
       <div class="team-roles">
-        <span>Product Planning</span><span>UI/UX Design</span><span>Mobile Apps</span><span>Web Apps</span>
-        <span>Backend &amp; APIs</span><span>Cloud — AWS / Azure</span><span>Admin Panels</span>
-        <span>QA &amp; Testing</span><span>Store Deployment</span><span>Maintenance &amp; Support</span>
+        <span>Custom Web Apps</span><span>REST API Development</span><span>E-commerce (WooCommerce)</span>
+        <span>WordPress Development</span><span>Laravel / PHP Backend</span><span>ReactJS Frontend</span>
+        <span>AWS &amp; VPS Setup</span><span>Database Design</span><span>CI/CD Pipelines</span>
+        <span>Performance Optimization</span><span>Maintenance &amp; Support</span><span>SEO-ready Builds</span>
       </div>
-      <a href="https://trsoftech.com" target="_blank" rel="noopener" class="team-btn">
-        Visit True Response Softech
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-      </a>
+      <div style="display:flex;gap:16px;justify-content:center;flex-wrap:wrap">
+        <a href="https://trsoftech.com/" target="_blank" rel="noopener" class="team-btn" style="background:rgba(255,255,255,.07);color:var(--txt);box-shadow:none;border:1px solid var(--line)">
+          Visit True Response Softech
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a>
+        <a href="#contact" class="team-btn">
+          Start a project with me
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a>
+      </div>
     </div>
   </div>
 </section>
 
-<!-- ============ CONTACT ============ -->
 <style>
   .contact{position:relative;z-index:2;padding:60px 0 90px}
-  .contact-card{position:relative;border:1px solid var(--line);border-radius:30px;overflow:hidden;
-    background:linear-gradient(165deg,var(--surface),var(--bg-2));padding:60px;
-    display:grid;grid-template-columns:1fr 1fr;gap:56px}
-  .contact-card::before{content:"";position:absolute;width:420px;height:420px;top:-180px;right:-120px;
-    background:radial-gradient(circle,rgba(79,224,197,.2),transparent 65%);filter:blur(50px);pointer-events:none}
-
-  .contact-left h2{font-family:"Bricolage Grotesque";font-weight:700;letter-spacing:-.03em;line-height:1.05;
-    font-size:clamp(30px,4vw,46px);margin:16px 0 16px}
-  .contact-left h2 em{font-style:normal;background:linear-gradient(105deg,var(--accent),var(--accent-2));
-    -webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+  .contact-card{position:relative;border:1px solid var(--line);border-radius:30px;overflow:hidden;background:linear-gradient(165deg,var(--surface),var(--bg-2));padding:60px;display:grid;grid-template-columns:1fr 1fr;gap:56px}
+  .contact-card::before{content:"";position:absolute;width:420px;height:420px;top:-180px;right:-120px;background:radial-gradient(circle,rgba(56,189,248,.15),transparent 65%);filter:blur(50px);pointer-events:none}
+  .contact-left h2{font-family:"Bricolage Grotesque";font-weight:700;letter-spacing:-.03em;line-height:1.05;font-size:clamp(30px,4vw,46px);margin:16px 0 16px}
+  .contact-left h2 em{font-style:normal;background:linear-gradient(105deg,var(--accent),var(--accent-2));-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
   .contact-left>p{color:var(--txt-mid);font-size:16px;line-height:1.7;max-width:380px}
-
   .c-methods{display:flex;flex-direction:column;gap:14px;margin-top:30px}
   .c-method{display:flex;align-items:center;gap:14px;text-decoration:none;color:var(--txt);transition:.3s var(--ease)}
-  .c-method .cm-ico{width:44px;height:44px;border-radius:13px;display:flex;align-items:center;justify-content:center;
-    background:rgba(255,255,255,.04);border:1px solid var(--line);transition:.3s var(--ease)}
+  .c-method .cm-ico{width:44px;height:44px;border-radius:13px;display:flex;align-items:center;justify-content:center;background:rgba(255,255,255,.04);border:1px solid var(--line);transition:.3s var(--ease)}
   .c-method .cm-ico svg{width:19px;height:19px;color:var(--accent)}
-  .c-method:hover .cm-ico{background:rgba(79,224,197,.12);border-color:var(--accent);transform:translateY(-2px)}
+  .c-method:hover .cm-ico{background:rgba(56,189,248,.1);border-color:var(--accent);transform:translateY(-2px)}
   .c-method .cm-lbl{font-size:11px;color:var(--txt-dim);font-family:"JetBrains Mono";letter-spacing:.05em}
   .c-method .cm-val{font-size:15px;font-weight:600}
-
   .socials{display:flex;gap:10px;margin-top:30px}
-  .socials a{width:42px;height:42px;border-radius:12px;display:flex;align-items:center;justify-content:center;
-    border:1px solid var(--line);background:rgba(255,255,255,.03);color:var(--txt-mid);transition:.3s var(--ease)}
+  .socials a{width:42px;height:42px;border-radius:12px;display:flex;align-items:center;justify-content:center;border:1px solid var(--line);background:rgba(255,255,255,.03);color:var(--txt-mid);transition:.3s var(--ease)}
   .socials a:hover{color:var(--accent);border-color:var(--accent);transform:translateY(-3px)}
   .socials a svg{width:19px;height:19px}
-
-  /* form */
   .c-form{display:flex;flex-direction:column;gap:16px}
   .field{display:flex;flex-direction:column;gap:7px}
   .field label{font-size:12.5px;font-family:"JetBrains Mono";color:var(--txt-dim);letter-spacing:.04em}
-  .field input,.field textarea,.field select{
-    width:100%;padding:13px 15px;border-radius:12px;border:1px solid var(--line);
-    background:rgba(255,255,255,.03);color:var(--txt);font-family:inherit;font-size:14.5px;transition:.3s;outline:none}
+  .field input,.field textarea,.field select{width:100%;padding:13px 15px;border-radius:12px;border:1px solid var(--line);background:rgba(255,255,255,.03);color:var(--txt);font-family:inherit;font-size:14.5px;transition:.3s;outline:none}
   .field textarea{resize:vertical;min-height:110px}
-  .field input:focus,.field textarea:focus,.field select:focus{border-color:var(--accent);background:rgba(79,224,197,.04);box-shadow:0 0 0 3px rgba(79,224,197,.1)}
-  .field select{appearance:none;cursor:pointer;
-    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' fill='none' stroke='%236b7384' stroke-width='2'%3E%3Cpath d='m3 5 4 4 4-4'/%3E%3C/svg%3E");
-    background-repeat:no-repeat;background-position:right 15px center}
+  .field input:focus,.field textarea:focus,.field select:focus{border-color:var(--accent);background:rgba(56,189,248,.06);box-shadow:0 0 0 3px rgba(79,224,197,.1)}
+  .field select{appearance:none;cursor:pointer;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' fill='none' stroke='%236b7384' stroke-width='2'%3E%3Cpath d='m3 5 4 4 4-4'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 15px center}
   .field select option{background:#0f121a}
   .frow{display:grid;grid-template-columns:1fr 1fr;gap:16px}
-  .submit-btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;padding:15px;border:0;cursor:pointer;
-    border-radius:13px;font-family:inherit;font-weight:600;font-size:15px;margin-top:4px;
-    background:linear-gradient(105deg,var(--accent),#7af0da);color:#04201b;transition:.3s var(--ease)}
+  .submit-btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;padding:15px;border:0;cursor:pointer;border-radius:13px;font-family:inherit;font-weight:600;font-size:15px;margin-top:4px;background:linear-gradient(105deg,#38bdf8,#22d3ee);color:#030b1a;transition:.3s var(--ease)}
   .submit-btn:hover{transform:translateY(-3px);box-shadow:0 16px 40px -12px var(--accent-glow)}
   .submit-btn svg{width:17px;height:17px}
   .form-note{font-size:12px;color:var(--txt-dim);text-align:center;margin-top:2px}
-
-  /* footer */
   footer{position:relative;z-index:2;border-top:1px solid var(--line);padding:40px 0;margin-top:30px}
   .foot-grid{display:flex;justify-content:space-between;align-items:center;gap:24px;flex-wrap:wrap}
   .foot-links{display:flex;gap:26px;list-style:none}
   .foot-links a{color:var(--txt-mid);text-decoration:none;font-size:14px;transition:.25s}
   .foot-links a:hover{color:var(--accent)}
   .foot-copy{font-size:13px;color:var(--txt-dim)}
-  .foot-copy a{color:var(--txt-mid);text-decoration:none}
-
-  @media(max-width:920px){
-    .contact-card{grid-template-columns:1fr;gap:44px;padding:40px 28px}
-    .contact{padding:40px 0 60px}
-  }
+  @media(max-width:920px){.contact-card{grid-template-columns:1fr;gap:44px;padding:40px 28px}.contact{padding:40px 0 60px}}
   @media(max-width:560px){.frow{grid-template-columns:1fr}.foot-grid{flex-direction:column;text-align:center}}
 </style>
 
 <section class="contact" id="contact">
   <div class="wrap">
     <div class="contact-card sr">
-      <!-- left -->
       <div class="contact-left">
         <span class="kicker"><span class="bar"></span>Get in touch</span>
-        <h2>Let's build your <em>next app</em>.</h2>
-        <p>Have a product idea, an existing app to improve, or just want a quote? Tell me about it — I usually reply within a few hours.</p>
-
+        <h2>Let's build your <em>next web project</em>.</h2>
+        <p>Have a product idea, an existing site to improve, or need a full-stack developer? Tell me about it &mdash; I usually reply within a few hours.</p>
         <div class="c-methods">
-          <a class="c-method" href="mailto:tech@trsoftech.com">
+          <a class="c-method" href="mailto:buntymail123@gmail.com">
             <span class="cm-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m2 7 10 6 10-6"/></svg></span>
-            <span><span class="cm-lbl">EMAIL</span><br><span class="cm-val">tech@trsoftech.com</span></span>
+            <span><span class="cm-lbl">EMAIL</span><br><span class="cm-val">buntymail123@gmail.com</span></span>
           </a>
-          <a class="c-method" href="tel:+918233088009">
-            <span class="cm-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3-8.6A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg></span>
-            <span><span class="cm-lbl">PHONE / WHATSAPP</span><br><span class="cm-val">+91 82330 88009</span></span>
+          <a class="c-method" href="https://github.com/bharatkabharman-pixel" target="_blank" rel="noopener">
+            <span class="cm-ico"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2A10 10 0 0 0 2 12c0 4.4 2.9 8.2 6.8 9.5.5.1.7-.2.7-.5v-1.7c-2.8.6-3.4-1.3-3.4-1.3-.4-1.2-1.1-1.5-1.1-1.5-.9-.6.1-.6.1-.6 1 .1 1.5 1 1.5 1 .9 1.5 2.3 1.1 2.9.8.1-.6.3-1.1.6-1.4-2.2-.2-4.6-1.1-4.6-5 0-1.1.4-2 1-2.7 0-.3-.4-1.3.1-2.7 0 0 .8-.3 2.7 1a9.4 9.4 0 0 1 5 0c1.9-1.3 2.7-1 2.7-1 .5 1.4.2 2.4.1 2.7.6.7 1 1.6 1 2.7 0 3.9-2.4 4.8-4.6 5 .3.3.7 1 .7 2v2.9c0 .3.2.6.7.5A10 10 0 0 0 22 12 10 10 0 0 0 12 2z"/></svg></span>
+            <span><span class="cm-lbl">GITHUB</span><br><span class="cm-val">bharatkabharman-pixel</span></span>
           </a>
         </div>
-
         <div class="socials">
-          <a href="https://github.com/rahul69x" target="_blank" rel="noopener" aria-label="GitHub"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2A10 10 0 0 0 2 12c0 4.4 2.9 8.2 6.8 9.5.5.1.7-.2.7-.5v-1.7c-2.8.6-3.4-1.3-3.4-1.3-.4-1.2-1.1-1.5-1.1-1.5-.9-.6.1-.6.1-.6 1 .1 1.5 1 1.5 1 .9 1.5 2.3 1.1 2.9.8.1-.6.3-1.1.6-1.4-2.2-.2-4.6-1.1-4.6-5 0-1.1.4-2 1-2.7 0-.3-.4-1.3.1-2.7 0 0 .8-.3 2.7 1a9.4 9.4 0 0 1 5 0c1.9-1.3 2.7-1 2.7-1 .5 1.4.2 2.4.1 2.7.6.7 1 1.6 1 2.7 0 3.9-2.4 4.8-4.6 5 .3.3.7 1 .7 2v2.9c0 .3.2.6.7.5A10 10 0 0 0 22 12 10 10 0 0 0 12 2z"/></svg></a>
-          <a href="https://www.linkedin.com/in/rahul-jangid-appdeveloper/" target="_blank" rel="noopener" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2zM8.3 18V10H5.7v8zM7 8.8a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3zM18.3 18v-4.4c0-2.3-1.2-3.4-2.9-3.4-1.3 0-1.9.7-2.3 1.3V10h-2.6v8h2.6v-4.3c0-1.1.5-1.8 1.4-1.8s1.3.6 1.3 1.8V18z"/></svg></a>
-          <a href="https://www.instagram.com/rahulmobiledev" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5.5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1.1" fill="currentColor" stroke="none"/></svg></a>
-          <a href="https://api.whatsapp.com/send/?phone=918233088009&text&type=phone_number&app_absent=0" target="_blank" rel="noopener" aria-label="WhatsApp"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15L2 22l5.1-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.1l-.3-.2-3 .8.8-2.9-.2-.3a8.2 8.2 0 1 1 6.9 3.7zm4.5-6.1c-.2-.1-1.4-.7-1.7-.8-.2-.1-.4-.1-.5.1l-.7.9c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-2-1.2 7.4 7.4 0 0 1-1.3-1.7c-.1-.2 0-.4.1-.5l.4-.5c.1-.1.1-.3.2-.4 0-.2 0-.3 0-.5l-.7-1.7c-.2-.5-.4-.4-.5-.4h-.5c-.2 0-.4 0-.6.3a2.8 2.8 0 0 0-.9 2.1c0 1.2.9 2.4 1 2.6.1.2 1.7 2.7 4.2 3.7 1.5.6 2 .7 2.7.6.4-.1 1.4-.6 1.6-1.1.2-.6.2-1 .1-1.1z"/></svg></a>
+          <a href="https://github.com/bharatkabharman-pixel" target="_blank" rel="noopener" aria-label="GitHub"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2A10 10 0 0 0 2 12c0 4.4 2.9 8.2 6.8 9.5.5.1.7-.2.7-.5v-1.7c-2.8.6-3.4-1.3-3.4-1.3-.4-1.2-1.1-1.5-1.1-1.5-.9-.6.1-.6.1-.6 1 .1 1.5 1 1.5 1 .9 1.5 2.3 1.1 2.9.8.1-.6.3-1.1.6-1.4-2.2-.2-4.6-1.1-4.6-5 0-1.1.4-2 1-2.7 0-.3-.4-1.3.1-2.7 0 0 .8-.3 2.7 1a9.4 9.4 0 0 1 5 0c1.9-1.3 2.7-1 2.7-1 .5 1.4.2 2.4.1 2.7.6.7 1 1.6 1 2.7 0 3.9-2.4 4.8-4.6 5 .3.3.7 1 .7 2v2.9c0 .3.2.6.7.5A10 10 0 0 0 22 12 10 10 0 0 0 12 2z"/></svg></a>
+          <a href="https://www.linkedin.com/in/kamlesh-jangir-872710201/" target="_blank" rel="noopener" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2zM8.3 18V10H5.7v8zM7 8.8a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3zM18.3 18v-4.4c0-2.3-1.2-3.4-2.9-3.4-1.3 0-1.9.7-2.3 1.3V10h-2.6v8h2.6v-4.3c0-1.1.5-1.8 1.4-1.8s1.3.6 1.3 1.8V18z"/></svg></a>
+          <a href="https://api.whatsapp.com/send/?phone=91&text&type=phone_number" target="_blank" rel="noopener" aria-label="WhatsApp"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15L2 22l5.1-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.1l-.3-.2-3 .8.8-2.9-.2-.3a8.2 8.2 0 1 1 6.9 3.7zm4.5-6.1c-.2-.1-1.4-.7-1.7-.8-.2-.1-.4-.1-.5.1l-.7.9c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-2-1.2 7.4 7.4 0 0 1-1.3-1.7c-.1-.2 0-.4.1-.5l.4-.5c.1-.1.1-.3.2-.4 0-.2 0-.3 0-.5l-.7-1.7c-.2-.5-.4-.4-.5-.4h-.5c-.2 0-.4 0-.6.3a2.8 2.8 0 0 0-.9 2.1c0 1.2.9 2.4 1 2.6.1.2 1.7 2.7 4.2 3.7 1.5.6 2 .7 2.7.6.4-.1 1.4-.6 1.6-1.1.2-.6.2-1 .1-1.1z"/></svg></a>
         </div>
       </div>
-
-      <!-- right: form -->
       <form class="c-form" id="contactForm">
         <div class="frow">
-          <div class="field"><label for="cf-name">YOUR NAME</label><input id="cf-name" name="name" type="text" placeholder="Jane Doe" required></div>
-          <div class="field"><label for="cf-email">EMAIL</label><input id="cf-email" name="email" type="email" placeholder="jane@company.com" required></div>
+          <div class="field"><label for="cf-name">YOUR NAME</label><input id="cf-name" name="name" type="text" placeholder="John Doe" required></div>
+          <div class="field"><label for="cf-email">EMAIL</label><input id="cf-email" name="email" type="email" placeholder="john@company.com" required></div>
         </div>
         <div class="field">
           <label for="cf-type">PROJECT TYPE</label>
           <select id="cf-type" name="type">
-            <option>New app from scratch</option>
-            <option>Improve / fix existing app</option>
-            <option>UI / UX implementation</option>
+            <option>New web app / SaaS from scratch</option>
+            <option>E-commerce (WordPress / WooCommerce)</option>
+            <option>Laravel / PHP backend &amp; APIs</option>
+            <option>ReactJS / Node.js frontend</option>
+            <option>AWS / VPS setup &amp; deployment</option>
+            <option>Fix / improve existing website</option>
             <option>Ongoing / retainer work</option>
             <option>Something else</option>
           </select>
         </div>
-        <div class="field"><label for="cf-msg">PROJECT DETAILS</label><textarea id="cf-msg" name="message" placeholder="Tell me a bit about what you're building, your timeline and budget…" required></textarea></div>
+        <div class="field"><label for="cf-msg">PROJECT DETAILS</label><textarea id="cf-msg" name="message" placeholder="Tell me about what you're building, tech stack preferences, timeline and budget..." required></textarea></div>
         <button class="submit-btn" type="submit">Send message
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M22 2 11 13M22 2l-7 20-4-9-9-4z"/></svg>
         </button>
-        <p class="form-note">Prefer email? Reach me directly at tech@trsoftech.com</p>
+        <p class="form-note">Or email me directly at buntymail123@gmail.com</p>
       </form>
     </div>
   </div>
 </section>
 
-<!-- ============ FOOTER ============ -->
 <footer>
   <div class="wrap">
     <div class="foot-grid">
-      <a href="#" class="logo"><span class="dot"></span>Rahul<span style="color:var(--accent)">.</span></a>
+      <a href="#" class="logo"><span class="dot"></span>Kamlesh<span style="color:var(--accent)">.</span></a>
       <ul class="foot-links">
         <li><a href="#work">Work</a></li>
         <li><a href="#about">About</a></li>
@@ -1171,42 +821,26 @@
         <li><a href="#testimonials">Reviews</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
-      <div class="foot-copy">© <span id="year"></span> Rahul Jangid · True Response Softech Pvt Ltd</div>
+      <div class="foot-copy">&copy; <span id="year"></span> Kamlesh Kumar Jangir &middot; Full Stack Web Developer</div>
     </div>
   </div>
 </footer>
 
 <script>
-  // sticky nav bg
   const header=document.getElementById('header');
   addEventListener('scroll',()=>header.classList.toggle('scrolled',scrollY>20));
-  // mobile menu
   const burger=document.getElementById('burger'),nav=document.getElementById('nav');
   burger.addEventListener('click',()=>nav.classList.toggle('open'));
   nav.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>nav.classList.remove('open')));
-  // subtle parallax on phone
-  const phone=document.querySelector('.phone');
-  addEventListener('mousemove',e=>{
-    if(innerWidth<920)return;
-    const x=(e.clientX/innerWidth-.5),y=(e.clientY/innerHeight-.5);
-    phone.style.transform=`rotateY(${x*8}deg) rotateX(${-y*8}deg) rotate(-1.5deg)`;
-  });
-  // scroll reveal
-  const io=new IntersectionObserver(es=>es.forEach(e=>{
-    if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}
-  }),{threshold:.15});
+  const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}}),{threshold:.15});
   document.querySelectorAll('.sr').forEach(el=>io.observe(el));
-  // footer year
   document.getElementById('year').textContent=new Date().getFullYear();
-  // contact form -> opens email client (no backend needed).
-  // To use a real backend later, swap this for a Formspree/Web3Forms endpoint.
-  const form=document.getElementById('contactForm');
-  form.addEventListener('submit',e=>{
+  document.getElementById('contactForm').addEventListener('submit',function(e){
     e.preventDefault();
-    const f=form;
-    const subject=encodeURIComponent(`New project enquiry — ${f.type.value}`);
-    const body=encodeURIComponent(`Name: ${f.name.value}\nEmail: ${f.email.value}\nProject type: ${f.type.value}\n\n${f.message.value}`);
-    window.location.href=`mailto:tech@trsoftech.com?subject=${subject}&body=${body}`;
+    const btn=this.querySelector('.submit-btn');
+    btn.textContent="Sent! I'll be in touch soon.";
+    btn.style.background='linear-gradient(105deg,#38bdf8,#22d3ee)';
+    setTimeout(()=>{btn.textContent='Send message';btn.style.background='';this.reset();},4000);
   });
 </script>
 </body>
